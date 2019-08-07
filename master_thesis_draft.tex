@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass{article}
 
 \usepackage{amsmath}
 \usepackage[affil-it]{authblk}
@@ -17,15 +17,15 @@
 \newpage
 \pagenumbering{arabic}
 
-\chapter{Introduction}
+\section{Introduction}
 
-Diffusion is a phenomenon which describes the transport of matter from one point to another by the thermal motion of atoms or molecules. From intermixing of gases and liquids, permeation of select atoms and molecules through membranes, homogenization of alloys, to thermal oxidation, diffusion plays an important role in several diverse processes. It is thus a fundamental in the study of all branches of biological and physical sciences, including solid-state physics, physical chemistry, physical metallurgy, and materials science. \par
+Diffusion is the phenomenon which describes the transport of matter from one point to another by the thermal motion of atoms or molecules. From intermixing of gases and liquids, permeation of select atoms and molecules through membranes, homogenization of alloys, to thermal oxidation, diffusion plays a crucial role in the kinetics of several diverse processes. It is thus a fundamental in the study of all branches of biological and physical sciences, including solid-state physics, physical chemistry, physical metallurgy, and materials science \cite{Mehrer2007}.
 
-An example often used to describe diffusion is the spreading of a droplet of ink in water, without stirring. Eventually, the solution will be coloured homegenously. This spreading is not due to any forces acting on the droplet or the water, but due to the random motion of the atoms or molecules involved. This random motion, termed Brownian motion, is responsible for diffusion. This motion is relatively fast in gases [$10^{-2}$\si{\per\second}], slow in liquids [$10^{-4}$\si{\per\second}], and very slow in solids [$<10^{-9}$ \si{\per\second} at half the melting temperature of the solid], wherein atoms are capable of leaving their lattice sites by thermal activation and move through the crystal. This is referred to as solid state diffusion.
+An example often used to describe diffusion is the spreading of a droplet of ink in water, without stirring. Eventually, the solution will be colored homogeneously. This spreading is not due to any forces acting on the droplet or the water, but due to the random motion of the atoms or molecules involved. This random motion, termed Brownian motion, is responsible for diffusion \cite{Einstein1905, Einstein1906}. This motion is relatively fast in gases ($10^{-2}m$\si{\per\second}), slow in liquids ($10^{-4}m$\si{\per\second}), and very slow in solids ($<10^{-9}m$\si{\per\second}) at half the melting temperature of the solid], wherein atoms are capable of leaving their lattice sites by thermal activation and move through the crystal \cite{Mehrer2007}. This is referred to as solid state diffusion. The most fundamental type of diffusion in a solid is self-diffusion.
 
-\section{Self-diffusion}
+\subsection{Self-diffusion}
 
-The most fundamental type of diffusion in a solid is self-diffusion. Self-diffusion in a pure material is the diffusion of the atoms of that material. It is mediated by vacancy defects, which are a type of point defect in the crystal structure, in which an atom is missing from one of the lattice sites. Vacancy defects are formed in crystal structures during the solidification process due to atomic vibrations, local rearrangement of atoms and plastic deformations. At any given temperature upto the melting temperature, the vacancy concentration $C_v$ in the material is given by,
+Self-diffusion in a pure metal is the diffusion of the atoms of that metal. It is mediated by the migration of point defects, like vacancies and self-interstitials \cite{Shewmon2016}. Self-diffusion in Face Centered Cubic (FCC) metals is controlled by the vacancy mechanism. Vacancies are formed in crystal structures during the solidification process due to atomic vibrations, local rearrangement of atoms and plastic deformations \cite{ehrhart1992properties}. At any given temperature up to the melting temperature, the vacancy concentration $C_v$ in the material is given by,
 %
 \begin{equation}
 C_v = exp\left(\dfrac{-G^v_f}{k_B T}\right)
@@ -39,7 +39,7 @@ C_v = exp\left(-\dfrac{H^v_f}{k_B T}\right) exp\left(\dfrac{S^v_f}{k_B}\right)
 %
 where $G^v_f$ is the free energy of vacancy formation, $H^v_f$ is the enthalpy of vacancy formation, $S^v_f$ is the vibrational entropy of vacancy formation, $k_B$ is the Boltzmann constant and $T$ is the temperature. 
 
-Therefore, at any given temperature there will be a finite number of vacancies in a material. The vacancy concentration is maximum close to the melting temperature [$\approx10^{-4}$] and decreases drastically with decreasing temperature. This is due to the fact that as temperature increases, more and more atoms gain enough energy to break the bonds with their nearest neighbour atoms and jump to the surface of the crystal, creating vacancies. In addition to this, atoms can also jump to the nearest neighbour lattice sites which have vacancies. The frequency of successful jumps to a nearest neighbor lattice site $\Gamma$ is given by,
+Therefore, at any given temperature there will be a finite number of vacancies in a material. The vacancy concentration is maximum close to the melting temperature ($\approx10^{-4}$) and decreases drastically with decreasing temperature \cite{Gottstein2004}. This is due to the fact that as temperature increases, more and more atoms gain enough energy to break the bonds with their nearest neighbor atoms and jump to the surface of the crystal, creating vacancies. In addition to this, atoms can also jump to the nearest neighbor lattice sites which have vacancies. The frequency of successful jumps to a nearest neighbor lattice site $\Gamma$ is given by,
 %
 \begin{equation}
 \Gamma = \vartheta_0 \cdot exp\left(\dfrac{-G^v_m}{k_B T}\right)
@@ -51,7 +51,7 @@ or as resolved into enthalpy and entropy,
 \Gamma = \vartheta_0 \cdot exp\left(-\dfrac{H^v_m}{k_B T}\right) exp\left(\dfrac{S^v_m}{k_B}\right)
 \end{equation}
 %
-where $\vartheta_0$ is an attempt frequency of the order of the Debye frequency [$10^{13}$],  $G^v_m$ is the free energy of vacancy migration, $H^v_m$ is the enthalpy of vacancy migration, $S^v_m$ is the vibrational entropy of vacancy migration.
+where $\vartheta_0$ is an attempt frequency of the order of the Debye frequency [$\approx10^{13}s^{-1}$],  $G^v_m$ is the free energy of vacancy migration, $H^v_m$ is the enthalpy of vacancy migration and $S^v_m$ is the vibrational entropy of vacancy migration.
 
 A jump can only be successful if the nearest neighbor lattice site is empty, i.e. if it is occupied by a vacancy. The probability that an arbitrarily picked lattice site is empty can be obtained from the vacancy concentration $C_v$, since $C_v$ is the fraction of lattice sites not occupied by atoms. If an atom has $z$ nearest neighbors, then the probability that any of the next neighbor sites is a vacancy is given by, 
 %
@@ -59,7 +59,7 @@ A jump can only be successful if the nearest neighbor lattice site is empty, i.e
 z \cdot C_v
 \end{equation}
 %
- Thus, the diffusion coefficient $D$ for self-diffusion is,
+ Thus, the self-diffusion coefficient $D$ is given by,
 %
 \begin{equation}
 D = \dfrac{\lambda^2}{6} z f C_v \Gamma
@@ -67,6 +67,66 @@ D = \dfrac{\lambda^2}{6} z f C_v \Gamma
 %
 where $\lambda^2$ is the jump distance [$a_0/\sqrt 2$ for an FCC crystal structure where $a_0$ is the lattice constant] and $f$ is the geometrical correction factor [0.78145 for FCC].
 
-It is important to note that diffusion of vacancies is necessary for self-diffuison to proceed. The site exchange of an atom and a vacancy is considered as diffusion of the vacancy, although the vacancy itself does not constitute a diffusing entity. In the case of vacancy diffusion however, there is no need for the formation of the vacancy, since it is already exists. The activation enthalpy for self-diffusion is $Q_{SD} = H^v_f + H^v_m$ while the activation enthalpy for vacancy diffusion is $Q_{V} =  H^v_m$, therefore, vacancy diffusion $D_V>>D$.
+It is important to note that the vacancy formation energy in FCC metals is much lower than the self-interstitial formation energy, which is why self-diffusion in FCC metals proceeds via the vacancy mechanism. Self-diffusion in Body Centered Cubic (BCC) metals however, can proceed via both vacancy and interstitial mechanisms, since their vacancy and interstitial formation energies are comparable to each other \cite{Mendelev2007}. 
+
+\subsection{Computational atomistic simulations}
+
+Experimental measurements of self-diffusion coefficients are made using tracers - radioactive isotopes of the element of the metal whose coefficient is to be measured. A sufficiently small amount of the tracer is allowed to diffuse through a sample and its penetration is measured, which can be then used to calculate the tracer diffusion coefficient, which differs from the self-diffusion coefficient by known numeric factor \cite{Mehrer2007} . Such measurements however are difficult, expensive and limited to a  temperature range significantly higher than the room temperature. A viable alternative is to use atomistic computer simulations, which in addition to predicting diffusion coefficients, can also provide an insight into the underlying diffusion mechanisms, which can be appropriately used in the design of new materials \cite{Mishin2005}.
+
+The second approach involves carrying out Molecular Dynamics (MD) simulations with semi empirical interatomic potentials \cite{Mendelev2009}.
+
+\subsubsection{The first principles method}
+
+The first principles method, which is most widely used method to determine self-diffusion coefficients, involves computing all the terms in Eqs. (1) and (3) at $T=0K$ and then solving for Eq. (6). Because such calculations only require small simulation cells, first-principles methods can be used to predict coefficients without any fitting parameters \cite{Mantina2008}. However, this approach relies on the assumption that all the required parameters are temperature independent. To account for the effects of thermal expansion on the parameters, the Quasi-Harmonic Approximation (QHA) is used.
+
+\subsubsection*{Quasi-harmonic approximation}
+
+The quasi-harmonic approximation is a phonon model which accounts for volume dependent thermal effects. This means that volume $V(T)$, and introduces volume dependence of phonon frequencies $\upsilon_i(V)$. The Gibbs free energy $G$ at constant pressure P resulting from this approximation is given by
+%
+\begin{equation}
+G(T, P)=min_V\left[E^{static}(V) +  k_B T\sum_{i=1}^{3N} \ln \left[2 \sinh \left(\dfrac{h \upsilon_i(V)}{k_B T}\right)\right] + PV\right]
+\end{equation}
+%
+where $E^{static}(V)$ is the electronic ground state energy at volume $V(T)$, $N$ is the number of dynamic atoms in the system and $h$ is the Planck's constant. 
+
+$min_V$ means that for a given temperature, a minimum value of V is evaluated. Since volume dependencies of energies in electronic and phonon structures are different, $min_V$ shifts the value calculated from the electronic structure $E^{static}(V)$ even at 0K (Zero-point enregy). By increasing temperature, the volume dependence of phonon free energy changes, then the equilibrium volume at temperatures changes. This is considered as thermal expansion under this approximation \cite{Togo2010}.
+
+From a bulk structure and the same relaxed structure with a vacancy, temperature and volume dependent Gibbs free energies for both structures can thus be obtained and used to find the temperature dependent free energy of vacancy formation used in Eq. (1) by the relation,
+%
+\begin{equation}
+G^v_f = N G_v - \dfrac{(N - 1)}{N} G_b
+\end{equation}
+%
+where $G_v$ is the Gibbs free energy of the vacancy structure and $G_b$ is the Gibbs free enregy of the bulk structure.
+
+\subsubsection*{Nudged elastic band}
+
+In order to find the transition state structure between a structure with a vacancy at lattice site $n$ and another structure with a vacancy at lattice site $n+1$,  the Nudged Elastic Band (NEB) method can be used. The NEB determines the Minimum Energy Path (MEP) between an initial and a final state, and gives a saddle point, which in this case is the transition state structure. Several 'images' are interpolated between the two vacancy structures, corresponding to the moving vacancy from $n$ to $n-1$, along a straight line. The images are assumed to be connected by springs – like an elastic band – to ensure the continuity of the images. Since the two vacancy structures are at respective minimum energies, there are two forces acting between any two images – the true force and the spring force. The minimization of these forces iteratively, leads to the MEP, which is no longer a straight line since the images move to their respective force minima. To ensure that the spring forces do not interfere with the convergence of the images to the MEP and the true force does not affect the distribution of the images along the MEP, a force projection is considered. This force projection includes only the parallel component of the spring force and the perpendicular component of the true force, thus resulting in a “nudge” \cite{Henkelman2000}. One of the images is made to climb up along the elastic band to converge rigorously on the highest saddle point \cite{Henkelman2000a}. 
+
+
+
+
+
+
+
+
+\subsubsection{Molecular Dynamics}
+
+\subsubsection{Drawbacks}
+
+\section{Methods}
+
+\subsection{Finite Temperature String method}
+
+\subsection{Markovian Milestoning}
+
+\subsection{Virtual work principle}
+
+\subsection{Thermodynamic Integration}
+
+\newpage
+
+\bibliography{citations} 
+\bibliographystyle{ieeetr}
 
 \end{document}
