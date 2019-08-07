@@ -1,0 +1,72 @@
+\documentclass{report}
+
+\usepackage{amsmath}
+\usepackage[affil-it]{authblk}
+\usepackage{siunitx}
+
+\title{Fully anharmonic self-diffusion coefficients using the Finite Temperature String method}
+\date{\small Dated: \today}
+\author{Raynol Dsouza\\[0.5cm] {Supervisors: Liam Huber, Blazej Grabowski, Jörg Neugebauer}}
+\affil{Max Planck Institut für Eisenforschung, Düsseldorf}
+
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\chapter{Diffusion in solids}
+
+Diffusion is a phenomenon which describes the transport of matter from one point to another by the thermal motion of atoms or molecules. From intermixing of gases and liquids, permeation of select atoms and molecules through membranes, homogenization of alloys, to thermal oxidation, diffusion plays an important role in several diverse processes. It is thus a fundamental in the study of all branches of biological and physical sciences, including solid-state physics, physical chemistry, physical metallurgy, and materials science. \par
+
+An example often used to describe diffusion is the spreading of a droplet of ink in water, without stirring. Eventually, the solution will be coloured homegenously. This spreading is not due to any forces acting on the droplet or the water, but due to the random motion of the atoms or molecules involved. This random motion, termed Brownian motion, is responsible for diffusion. This motion is relatively fast in gases [$10^{-2}$\si{\per\second}], slow in liquids [$10^{-4}$\si{\per\second}], and very slow in solids [$<10^{-9}$ \si{\per\second} at half the melting temperature of the solid], wherein atoms are capable of leaving their lattice sites by thermal activation and move through the crystal. This is referred to as solid state diffusion.
+
+\section{Self-diffusion}
+
+The most fundamental type of diffusion in a solid is self-diffusion. Self-diffusion in a pure material is the diffusion of the atoms of that material. It is mediated by vacancy defects, which are a type of point defect in the crystal structure, in which an atom is missing from one of the lattice sites. Vacancy defects are formed in crystal structures during the solidification process due to atomic vibrations, local rearrangement of atoms and plastic deformations. At any given temperature upto the melting temperature, the vacancy concentration $C_v$ in the material is given by,
+%
+\begin{equation}
+C_v = exp\left(\dfrac{-G^v_f}{k_B T}\right)
+\end{equation}
+%
+or as resolved into enthalpy and entropy,
+%
+\begin{equation}
+C_v = exp\left(-\dfrac{H^v_f}{k_B T}\right) exp\left(\dfrac{S^v_f}{k_B}\right)
+\end{equation}
+%
+where $G^v_f$ is the free energy of vacancy formation, $H^v_f$ is the enthalpy of vacancy formation, $S^v_f$ is the vibrational entropy of vacancy formation, $k_B$ is the Boltzmann constant and $T$ is the temperature. 
+
+Therefore, at any given temperature there will be a finite number of vacancies in a material. The vacancy concentration is maximum close to the melting temperature [$\approx10^{-4}$] and decreases drastically with decreasing temperature. This is due to the fact that as temperature increases, more and more atoms gain enough energy to break the bonds with their nearest neighbour atoms and jump to the surface of the crystal, creating vacancies. In addition to this, atoms can also jump to the nearest neighbour lattice sites which have vacancies. The frequency of successful jumps to a nearest neighbor lattice site $\Gamma$ is given by,
+%
+\begin{equation}
+\Gamma = \vartheta_0 \cdot exp\left(\dfrac{-G^v_m}{k_B T}\right)
+\end{equation}
+%
+or as resolved into enthalpy and entropy,
+%
+\begin{equation}
+\Gamma = \vartheta_0 \cdot exp\left(-\dfrac{H^v_m}{k_B T}\right) exp\left(\dfrac{S^v_m}{k_B}\right)
+\end{equation}
+%
+where $\vartheta_0$ is an attempt frequency of the order of the Debye frequency [$10^{13}$],  $G^v_m$ is the free energy of vacancy migration, $H^v_m$ is the enthalpy of vacancy migration, $S^v_m$ is the vibrational entropy of vacancy migration.
+
+A jump can only be successful if the nearest neighbor lattice site is empty, i.e. if it is occupied by a vacancy. The probability that an arbitrarily picked lattice site is empty can be obtained from the vacancy concentration $C_v$, since $C_v$ is the fraction of lattice sites not occupied by atoms. If an atom has $z$ nearest neighbors, then the probability that any of the next neighbor sites is a vacancy is given by, 
+%
+\begin{equation}
+z \cdot C_v
+\end{equation}
+%
+ Thus, the diffusion coefficient $D$ for self-diffusion is,
+%
+\begin{equation}
+D = \dfrac{\lambda^2}{6} z f C_v \Gamma
+\end{equation}
+%
+where $\lambda^2$ is the jump distance [$a_0/\sqrt 2$ for an FCC crystal structure where $a_0$ is the lattice constant] and $f$ is the geometrical correction factor [0.78145 for FCC].
+
+It is important to note that diffusion of vacancies is necessary for self-diffuison to proceed. The site exchange of an atom and a vacancy is considered as diffusion of the vacancy, although the vacancy itself does not constitute a diffusing entity. In the case of vacancy diffusion however, there is no need for the formation of the vacancy, since it is already exists. The activation enthalpy for self-diffusion is $Q_{SD} = H^v_f + H^v_m$ while the activation enthalpy for vacancy diffusion is $Q_{V} =  H^v_m$, therefore, vacancy diffusion $D_V>>D$.
+
+\end{document}
