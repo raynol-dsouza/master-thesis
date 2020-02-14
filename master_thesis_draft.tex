@@ -69,19 +69,19 @@ breaklines=true
 \newpage
 \begin{abstract}
 \normalsize
-Simulating self-diffusion in solids using molecular dynamics (MD) usually requires high temperatures, where diffusion can occur at a high enough rate. Finite temperature effects can be well represented at low temperatures using phonon calculations in the well-known quasi-harmonic approximation (QHA). However, anharmonic effects that appear well below room temperature, even for a relatively simple thermodynamic property like vacancy formation energy, are not captured by QHA. This work applies the finite temperature string (FTS) method in combination with thermodynamic integration with Langevin dynamics (TILD) to obtain self-diffusion coefficients that capture anharmonic behavior. Using this technique, diffusion at temperatures above the threshold at which QHA begins to lose validity, as well as temperatures at which calculations by direct MD are feasible are accessed. The FTS and TILD algorithms have been implemented in the pyiron framework, and are used to obtain anharmonic self-diffusion coefficients for species with FCC (Al, Ni, Cu) and BCC (Fe, Mo) crystal structures from 1K up to 0.75 $\mathrm{T_{melt}}$. A careful analysis of the anharmonicity of each of the species is carried out. A good agreement between the results from the FTS method and those simulated by MD at high temperatures is obtained, and the results at low temperatures continue along the slope of the MD computed self-diffusion coefficients. 
+Simulating self-diffusion in solids using molecular dynamics (MD) usually requires high temperatures, where diffusion can occur at a high enough rate. Finite temperature effects can be well represented at low temperatures using phonon calculations in the well-known quasi-harmonic approximation (QHA). However, anharmonic effects that appear well below room temperature, even for a relatively simple thermodynamic property like vacancy formation energy, are not captured by QHA. This work applies the finite temperature string (FTS) method in combination with thermodynamic integration using Langevin dynamics (TILD) to obtain self-diffusion coefficients that capture anharmonic behavior. Using this technique, diffusion at temperatures above the threshold at which QHA begins to lose validity, as well as temperatures at which calculations by direct MD are feasible are accessed. The FTS and TILD algorithms have been implemented in the pyiron framework, and are used to obtain anharmonic self-diffusion coefficients for species with FCC (Al, Ni, Cu) and BCC (Fe, Mo) crystal structures from 1 K up to 0.75 $\mathrm{T_{melt}}$. A careful analysis of the anharmonicity of each of the species is carried out. A good agreement between the results from the FTS method and those simulated by MD at high temperatures is obtained, and the results at low temperatures continue along the slope of the MD computed self-diffusion coefficients. 
 \end{abstract}
 
 \newpage
 \selectlanguage{ngerman} 
 \begin{abstract}
 \normalsize
-Die Simulation der Selbstdiffusion in Feststoffen unter Verwendung der Moleküldynamik (MD) erfordert in der Regel hohe Temperaturen, bei denen die Diffusion mit einer ausreichenden Geschwindigkeit erfolgen kann. Finite Temperatureffekte können bei niedrigen Temperaturen durch Phononenberechnungen in der bekannten quasi-harmonischen Approximation (QHA) gut dargestellt werden. Anharmonische Effekte, die weit unter der Raumtemperatur liegen, werden jedoch selbst bei einer relativ einfachen thermodynamischen Eigenschaft wie der Leerstellenbildungsenergie von QHA nicht erfasst. Diese Arbeit wendet die Finite-Temperatur-String (FTS)-Methode in Kombination mit der thermodynamischen Integration mit der Langevin-Dynamik (TILD) an, um Selbstdiffusionskoeffizienten zu erhalten, die das anharmonische Verhalten erfassen. Mit dieser Technik werden Diffusionen bei Temperaturen oberhalb der Schwelle, ab der QHA an Gültigkeit verliert, sowie Temperaturen, bei denen Berechnungen mit direkter MD möglich sind, aufgerufen. Die FTS- und TILD-Algorithmen wurden im Pyiron-Framework implementiert und werden verwendet, um anharmonische Selbstdiffusionskoeffizienten für Arten mit FCC- (Al, Ni, Cu) und BCC- (Fe, Mo) Kristallstrukturen von 1K bis 0,75 $\mathrm{T_{melt}}$ zu erhalten. Eine sorgfältige Analyse der Anharmonizität jeder der Arten wird durchgeführt. Eine gute Übereinstimmung zwischen den Ergebnissen der FTS-Methode und denen, die von MD bei hohen Temperaturen simuliert werden, wird erreicht, und die Ergebnisse bei niedrigen Temperaturen setzen sich entlang der Steigung der von MD berechneten Selbstdiffusionskoeffizienten fort.\footnote{Translated from English to German using \url{https://www.deepl.com/en/translator}}
+Die Simulation der Selbstdiffusion in Feststoffen unter Verwendung der Moleküldynamik (MD) erfordert in der Regel hohe Temperaturen, bei denen die Diffusion mit einer ausreichenden Geschwindigkeit erfolgen kann. Finite Temperatureffekte können bei niedrigen Temperaturen durch Phononenberechnungen in der bekannten quasi-harmonischen Approximation (QHA) gut dargestellt werden. Anharmonische Effekte, die weit unter der Raumtemperatur liegen, werden jedoch selbst bei einer relativ einfachen thermodynamischen Eigenschaft wie der Leerstellenbildungsenergie von QHA nicht erfasst. Diese Arbeit wendet die Finite-Temperatur-String (FTS)-Methode in Kombination mit der thermodynamischen Integration mit der Langevin-Dynamik (TILD) an, um Selbstdiffusionskoeffizienten zu erhalten, die das anharmonische Verhalten erfassen. Mit dieser Technik werden Diffusionen bei Temperaturen oberhalb der Schwelle, ab der QHA an Gültigkeit verliert, sowie Temperaturen, bei denen Berechnungen mit direkter MD möglich sind, aufgerufen. Die FTS- und TILD-Algorithmen wurden im Pyiron-Framework implementiert und werden verwendet, um anharmonische Selbstdiffusionskoeffizienten für Arten mit FCC- (Al, Ni, Cu) und BCC- (Fe, Mo) Kristallstrukturen von 1 K bis 0,75 $\mathrm{T_{melt}}$ zu erhalten. Eine sorgfältige Analyse der Anharmonizität jeder der Arten wird durchgeführt. Eine gute Übereinstimmung zwischen den Ergebnissen der FTS-Methode und denen, die von MD bei hohen Temperaturen simuliert werden, wird erreicht, und die Ergebnisse bei niedrigen Temperaturen setzen sich entlang der Steigung der von MD berechneten Selbstdiffusionskoeffizienten fort.\footnote{Translated from English to German using \url{https://www.deepl.com/en/translator}}
 \end{abstract}
 \selectlanguage{english} 
 
 \newpage
-\epigraph{\centering \textit{\enquote{To live is to risk it all; otherwise you're just an inert chunk of randomly assembled molecules drifting wherever the universe blows you...}}{\flushright{- Rick Sanchez, Rick and Morty, S03 E02 - Rickmancing the Stone}} }
+\epigraph{\centering \textit{\enquote{To live is to risk it all; otherwise you're just an inert chunk of randomly assembled molecules drifting wherever the universe blows you...}}{\flushright{$-$ Rick Sanchez, Rick and Morty, S03 E02 $-$ Rickmancing the Stone}} }
 
 \newpage
 \tableofcontents
@@ -92,23 +92,23 @@ Die Simulation der Selbstdiffusion in Feststoffen unter Verwendung der Moleküld
 
 \subsection{Motivation}
 
-Diffusion is the phenomenon of transport of matter from one point to another by the motion of atoms or molecules. From intermixing of gases and liquids, permeation of select atoms and molecules through membranes, homogenization of alloys, to thermal oxidation, diffusion plays a crucial role in the kinetics of diverse processes. It is thus a fundamental in the study of all branches of biological and physical sciences, including solid-state physics, physical chemistry, physical metallurgy and materials science \cite{Mehrer2007}.
+Diffusion is the phenomenon of transport of matter from one point to another by the motion of atoms or molecules. From intermixing of gases and liquids, permeation of selected atoms and molecules through membranes, homogenization of alloys, to thermal oxidation, diffusion plays a crucial role in the kinetics of diverse processes. It is thus a fundamental in the study of all branches of biological and physical sciences, including solid-state physics, physical chemistry, physical metallurgy and materials science \cite{Mehrer2007}.
 
-An example often used to describe diffusion is the spreading of a droplet of ink in water without any stirring: the ink spreads, and eventually the solution becomes homogeneously coloured. This spreading is not due to any forces acting on the droplet or the water, but due to the random motion of the atoms or molecules involved. This random motion, termed Brownian motion, is responsible for diffusion \cite{Einstein1905}. The velocity associated with this random motion is relatively fast in gases ($10^{-2}$m\si{\per\second}), slow in liquids ($10^{-4}$m\si{\per\second}), and very slow in solids ($<10^{-9}$m\si{\per\second} at half the melting temperature of the solid). In crystalline solids, atoms are capable of leaving their lattice sites and moving through the crystal structure \cite{Mehrer2007}. This is the most fundamental type of diffusion in a solid and is referred to as \enquote*{self-diffusion}.
+An example often used to describe diffusion is the spreading of a droplet of ink in water without any stirring: the ink spreads, and eventually the solution becomes homogeneously coloured. This spreading is not due to any forces acting on the droplet or the water, but due to the random motion of the atoms or molecules involved. This random motion, termed Brownian motion, is responsible for diffusion \cite{Einstein1905}. The velocity associated with this random motion is relatively fast in gases ($10^{-2}$ m\si{\per\second}), slow in liquids ($10^{-4}$ m\si{\per\second}), and very slow in solids ($<10^{-9}$ m\si{\per\second} at half the melting temperature of the solid). In crystalline solids, atoms are capable of leaving their lattice sites and moving through the crystal structure \cite{Mehrer2007}. This is the most fundamental type of diffusion in a solid and is referred to as \enquote*{self-diffusion}.
 
-Experimental measurements of self-diffusion coefficients are made using tracers, which are radioactive isotopes of the element of the metal whose self-diffusion coefficient is being measured. However, such measurements are difficult and expensive. Furthermore, at lower temperatures diffusion is incredibly slow ($\approx10^{-26}\text{m}^2$\si{\per\second} at room temperature \cite{Mantina2008}) and almost impossible to detect. For this reason, measurements are limited to high temperatures. Due to advancements in computing power, a viable and less expensive alternative to experiments is the use atomistic computer simulations. Such simulations can be used to predict both self-diffusion coefficients and the diffusion coefficients of alloying elements, and can provide an insight into the underlying mechanisms of diffusion. These insights can be used in the design of new materials \cite{Mishin2005}. Two mainstream techniques are commonly used: the quasi-harmonic method and molecular dynamics simulations.
+Experimental measurements of self-diffusion coefficients are made using tracers, which are radioactive isotopes of the element of the metal whose self-diffusion coefficient is being measured. However, such measurements are difficult and expensive. Furthermore, at lower temperatures diffusion is incredibly slow ($\approx10^{-26}\text{ m}^2$\si{\per\second} at room temperature \cite{Mantina2008}) and almost impossible to detect. For this reason, measurements are limited to high temperatures. Due to advancements in computing power, a viable and less expensive alternative to experiments is the use of atomistic computer simulations. Such simulations can be used to predict both self-diffusion coefficients and the diffusion coefficients of alloying elements, and can provide an insight into the underlying mechanisms of diffusion. These insights can be used in the design of new materials \cite{Mishin2005}. Two mainstream techniques are commonly used: the quasi-harmonic method and molecular dynamics simulations.
 
-Computations using the quasi-harmonic method require relatively small simulation cells, and can be used to predict self-diffusion coefficients without any fitting parameters \cite{Mantina2008}. From the $T=0$K data, the temperature dependent lattice parameters are determined using the Quasi-Harmonic Approximation (QHA). Using a combination of QHA, the Nudged Elastic Band (NEB) method and Transition State Theory (TST), temperature dependent thermodynamic properties and self-diffusion coefficients can be obtained not only using semi-empirical interatomic potentials (fitted classical potentials), but also using Density Functional Theory (DFT) potentials.
+Computations using the quasi-harmonic method require relatively small simulation cells, and can be used to predict self-diffusion coefficients without any fitting parameters \cite{Mantina2008}. From the $T=0$ K data, the temperature dependent lattice parameters are determined using the Quasi-Harmonic Approximation (QHA). Using a combination of QHA, the Nudged Elastic Band (NEB) method and Transition State Theory (TST), temperature dependent thermodynamic properties and self-diffusion coefficients can be obtained not only using semi-empirical interatomic potentials (fitted classical potentials), but also using Density Functional Theory (DFT) potentials.
 
 Molecular Dynamics (MD) simulations using fitted classical potentials offer the most direct approach to diffusion calculations \cite{Kaur1995}. MD simulations involve solving Newton's equations of motion for each atom at each step numerically to obtain trajectories of the system in an ensemble. By using a thermostat (Langevin \cite{Davidchack2009}, Nosé-Hoover \cite{Evans1985}), it is possible to simulate atomic vibrations corresponding to a particular temperature. MD captures the anharmonicity of such atomic vibrations and all related temperature effects \cite{Mendelev2009}. In principal, MD simulations can be performed using DFT potentials too, but they would be computationally prohibitive.
 
-The quasi-harmonic method, while being quantum mechanically accurate, does not give reliable results at high temperatures. It is certainly accurate at low temperatures (e.g. $T<150$K for Al, Ni \cite{Maradudin1963}) where quantum mechanical effects are dominant, but does not take into account the anharmonicity of atomic vibrations and non-local entropic effects, which typically become significant with increasing temperature. Direct computaion using molecular dynamics meanwhile, does the opposite: it accounts for this anharmonicity and non-local entropy, but as temperatures drop to lower and lower fractions of the melting temperature, no atomic hops can be observed within the simulated timescale. The computational cost scales exponentially even for classical potentials. There is thus a need for a single, robust approach that can overcome these limitations to predict accurate self-diffusion coefficients over the entire temperature range with a reasonable computational cost. Such a method would converge with results from the quasi-harmonic method at low temperatures (within classical assumptions), and with results from molecular dynamics simulations at high temperatures, while accounting for anharmonicity and any possible non-local entropy. 
+The quasi-harmonic method, while being quantum mechanically accurate, does not give reliable results at high temperatures. It is certainly accurate at low temperatures (e.g. $T<150 $ K for Al, Ni \cite{Maradudin1963}) where quantum mechanical effects are dominant, but does not take into account the anharmonicity of atomic vibrations and non-local entropic effects, which typically become significant with increasing temperature. Direct computation using molecular dynamics meanwhile, does the opposite: it accounts for this anharmonicity and non-local entropy, but as temperatures drop to lower and lower fractions of the melting temperature, no atomic hops can be observed within the simulated timescale. The computational cost scales exponentially even for classical potentials. There is thus a need for a single, robust approach that can overcome these limitations to predict accurate self-diffusion coefficients over the entire temperature range with a reasonable computational cost. Such a method would converge with results from the quasi-harmonic method at low temperatures (within classical assumptions), and with results from molecular dynamics simulations at high temperatures, while accounting for anharmonicity and any possible non-local entropy. 
 
 \subsection{Objective}
 
-This thesis explores the use of the Finite Temperature String (FTS) method \cite{Vanden-Eijnden2009} to obtain fully anharmonic self-diffusion coefficients. Using computationally efficient semi-empirical interatomic potentials, the FTS method is used in combination with the Virtual Work (VW) principle \cite{Swinburne2017} or the Markovian Milestoning (MM) technique \cite{Vanden-Eijnden2009a} to determine fully anharmonic self-diffusion coefficients up to the melting temperature. The method is applied to FCC (Aluminium, Nickel) and BCC (Iron and Molybdenum) crystal systems, and compared to the mainstream techniques for both accuracy and efficiency.
+This thesis explores the use of the Finite Temperature String (FTS) method \cite{Vanden-Eijnden2009} to obtain fully anharmonic self-diffusion coefficients. Using computationally efficient semi-empirical interatomic potentials, the FTS method is used in combination with the Virtual Work (VW) principle \cite{Swinburne2017} or the Markovian Milestoning (MM) technique \cite{Vanden-Eijnden2009a} to determine fully anharmonic self-diffusion coefficients up to the melting temperature. The method is applied to FCC (Aluminium, Nickel, Copper) and BCC (Iron and Molybdenum) crystal systems, and compared to the mainstream techniques for both accuracy and efficiency.
 
-The following chapter begins with the concept of self-diffusion in metals and gives a brief overview of the quasi-harmonic method and molecular dynamics. It also provides a mathematical overview of the FTS method, including the VW principle and the MM technique. The algorithms and the computational aspects of the simulations will be presented in Chapter 3. The simulated results will be discussed and compared to the results from quasi-harmonic and molecular dynamics simulations in Chapter 4, followed by a discussion on theprospect of extending the FTS method from classical to DFT-accurate potentials in Chapter 5.
+The following chapter begins with the concept of self-diffusion in metals and gives a brief overview of the quasi-harmonic method and molecular dynamics. It also provides a mathematical overview of the FTS method, including the VW principle and the MM technique. The algorithms and the computational aspects of the simulations will be presented in Chapter 3. The simulated results will be discussed and compared to the results from quasi-harmonic and molecular dynamics simulations in Chapter 4, followed by a discussion on the prospect of extending the FTS method from classical to DFT-accurate potentials in Chapter 5.
 
 \begin{figure}[!htp]
 \centering
@@ -117,7 +117,7 @@ The following chapter begins with the concept of self-diffusion in metals and gi
 \subfloat[]{\includegraphics[width=1.5in]{2}}\hfill
 \subfloat[]{\includegraphics[width=1.5in]{3}}
 \subfloat[]{\includegraphics[width=1.5in]{4}}
-\caption{Self-diffusion in FCC Aluminum. The migrating atom moves from (a) to (e) via the vacancy mechanism.}
+\caption{Self-diffusion in FCC Aluminum. The migrating atom moves from (a) to (e) via the vacancy mechanism}
 \label{fig:1}
 \end{figure}
 
@@ -127,26 +127,26 @@ The following chapter begins with the concept of self-diffusion in metals and gi
 
 Self-diffusion in a pure metal is mediated by the migration of point defects, like vacancies and self-interstitials \cite{Shewmon2016}. Self-diffusion in Face Centered Cubic (FCC) metals is controlled by the vacancy mechanism \cite{Mehrer1978} as the vacancy formation energy in FCC metals is much lower than the self-interstitial formation energy. Self-diffusion in Body Centered Cubic (BCC) metals can proceed via both vacancy and interstitial mechanisms, since their vacancy and self-interstitial formation energies are often comparable to each other \cite{Mendelev2007}. Within this thesis, only self-diffusion via the vacancy mechanism will be considered.
 
-\subsubsection{Vacancy concentration}
+\subsubsection{Equilibrium vacancy concentration}
 
-Vacancies are formed in crystal structures during the solidification process due to atomic vibrations, local rearrangement of atoms, and during plastic deformations \cite{Ehrhart1992}. At any given temperature up to the melting point, the concentration of vacancies $C_v$ in a material is given by,
+Vacancies are formed in crystal structures during the solidification process due to atomic vibrations, local rearrangement of atoms, and during plastic deformations \cite{Ehrhart1992}. At any given temperature up to the melting point, the concentration of vacancies $C_v$ in a material at thermodynamic equilibrium is given by,
 %
 \begin{equation} \label{eq:1}
-C_v = \exp\left(\dfrac{-G^v_f}{k_B T}\right) = \exp\left(-\dfrac{H^v_f}{k_B T}\right) \exp\left(\dfrac{S^v_f}{k_B}\right)
+C_v = \exp\left(\dfrac{-G^v_f}{k_B T}\right) = \exp\left(\dfrac{-H^v_f}{k_B T}\right) \exp\left(\dfrac{S^v_f}{k_B}\right)
 \end{equation}
 %
-where $G^v_f$ is the Gibbs free energy of vacancy formation, $H^v_f$ is the enthalpy of vacancy formation, $S^v_f$ is the vibrational entropy of vacancy formation, $k_B$ is the Boltzmann constant and $T$ is the temperature. 
+where $G^v_f$ is the Gibbs free energy of vacancy formation, $H^v_f$ is the enthalpy of vacancy formation, $S^v_f$ is the vibrational entropy of vacancy formation, $k_B$ is the Boltzmann constant and $T$ is the temperature. Therefore, at any given temperature there will be a finite number of vacancies in a metal at thermodynamic equilibrium.
 
-The vacancy concentration is maximum close to its melting temperature ($\approx10^{-4}$) and decreases drastically with decreasing temperature \cite{Gottstein2004}. Therefore, at any given temperature there will be a finite number of vacancies in a metal at thermodynamic equilibrium.
+A detailed derivation of Eq. (\ref{eq:1}) from the second law of thermodynamics is included in Section \ref{2ndlaw}. The equilibrium vacancy concentration is maximum close to the melting temperature ($\approx10^{-4}$) and decreases drastically with decreasing temperature \cite{Gottstein2004}. 
 
 \subsubsection{Atomic jump process}
 
-At finite temperatures, atoms in a crystal oscillate around their equilibrium positions. For any given atom to \enquote{jump} from its lattice site to a neighboring vacancy site, energy is required. Usually, the oscillations are not violent enough to overcome the barrier and the atom will return to its initial position, since he energy required for a successful jump is typically large with respect to the thermal energy, $k_BT$.  Occasionally, large displacements from the equilibrium position result in a successful jump of the atom to the vacancy site. These activation events are infrequent relative to the frequencies of the lattice vibrations, which are characterized by the Debye frequency. When an atom performs a successful jump it loses its energy and becomes deactivated, and waits on the average for many lattice vibrations before it can jump again. Thus, diffusion of atoms in a crystal occurs in a series of discrete jumps from one lattice site to the next \cite{Mehrer2007}.
+At finite temperatures, atoms in a crystal oscillate around their equilibrium positions. For any given atom to \enquote{jump} from its lattice site to a neighboring vacancy site, energy is required. Usually, the oscillations are not violent enough to overcome the barrier and the atom will return to its initial position, since the energy required for a successful jump is typically large with respect to the thermal energy, $k_BT$.  Occasionally, large displacements from the equilibrium position result in a successful jump of the atom to the vacancy site. These activation events are infrequent relative to the frequencies of the lattice vibrations, which are characterized by the Debye frequency. When an atom performs a successful jump it loses its energy and becomes deactivated, and waits on the average for many lattice vibrations before it can jump again. Thus, diffusion of atoms in a crystal occurs in a series of discrete jumps from one lattice site to the next \cite{Mehrer2007}.
 
 The frequency of successful jumps to a vacant nearest neighbor lattice site, or simply the jump frequency $\Gamma$, can be obtained from Eyring's reaction rate theory \cite{Eyring1935} as,
 %
 \begin{equation} \label{eq:2}
-\Gamma = \dfrac{\kappa k_B T}{h} \exp\left(\dfrac{-G^v_m}{k_B T}\right) =\dfrac{k_B T}{h} \exp\left(-\dfrac{H^v_m}{k_B T}\right) \exp\left(\dfrac{S^v_m}{k_B}\right)
+\Gamma = \dfrac{\kappa k_B T}{h} \exp\left(\dfrac{-G^v_m}{k_B T}\right) =\dfrac{k_B T}{h} \exp\left(\dfrac{-H^v_m}{k_B T}\right) \exp\left(\dfrac{S^v_m}{k_B}\right)
 \end{equation}
 %
 where $G^v_m$ is the Gibbs free energy of vacancy migration, $H^v_m$ is the enthalpy of vacancy migration, $S^v_m$, the vibrational entropy of vacancy migration, $h$ is the Planck's constant and $\kappa$ is transmission coefficient, which is the probability that a system reaching the saddle state will proceed to complete the reaction. For self-diffusion, $\kappa=1$ is assumed, such that once an atom gains thermal energy greater than the migration barrier, it always jumps to the vacancy site.
@@ -162,7 +162,7 @@ where $\lambda^2$ is the jump distance.
 \begin{figure}[htp] 
 \centering
 \includegraphics[scale=0.7]{jumping_atom}
-\caption{Atomic jump process in a crystalline solid: the black atom moves from an initial configuration (left) to a final configuration (right) pushing through a saddlepoint configuration (middle). Used with permission from \cite{Mehrer2007}.}
+\caption{Atomic jump process in a crystalline solid: the black atom moves from an initial configuration (left) to a final configuration (right) pushing through a saddlepoint configuration (middle). Used with permission from \cite{Mehrer2007}}
 \label{fig:2}
 \end{figure}
 
@@ -178,19 +178,19 @@ The jump correlation factor is 0.78145 for FCC, 0.72149 for BCC \cite{Montet1973
 
 \subsubsection{Random walk}
 
-Another way of obtaining the self-diffusion coefficient in a crystal lattice using simulaiton is by considering diffusion as a random walk problem. The total displacement of an atom is composed of many random individual jumps where it exchanges position with a vacancy at a nearest neighbor site. The mean square displacement $\langle \bm{r}(t)^2 \rangle$ of all the atoms in the crystal and the self-diffusion coefficient are related by a modified version of the Einstein-Smoluchowski relation \cite{VonSmoluchowski1906} as,
+Another way of obtaining the self-diffusion coefficient in a crystal lattice using simulation is by considering diffusion as a random walk problem. The total displacement of an atom is composed of many random individual jumps where it exchanges position with a vacancy at a nearest neighbor site. The mean square displacement $\langle \bm{r}(t)^2 \rangle$ of all the atoms in the crystal and the self-diffusion coefficient are related by a modified version of the Einstein-Smoluchowski relation \cite{VonSmoluchowski1906} as,
 %
 \begin{equation} \label{eq:5}
-D = \dfrac{\langle \bm{r}(t)^2 \rangle}{6\tau} \cdot \dfrac{C_v}{C_v^{cell}}
+D = \dfrac{\langle \bm{r}(t)^2 \rangle}{6\tau} \cdot \dfrac{C_v}{C_v^{box}}
 \end{equation}
 %
-where $\tau$ is the total time over which diffusion is simulated, and $C_v^{cell}$ is the vacancy concentration of the simulation box. The factor 6 accounts for the translational and vibrational degrees of freedom in 3 dimensions.\\
+where $\tau$ is the total time over which diffusion is simulated, $C_v$ is the equilibrium vacancy concentration from Eq. (\ref{eq:1}) normalized by $C_v^{box}$, the vacancy concentration of the simulation box. The factor 6 accounts for the translational and vibrational degrees of freedom in 3 dimensions.\\
 
 Eqs. (\ref{eq:3}) and (\ref{eq:5}) show two different approaches to calculating the self-diffusion coefficient. Two common approaches using these equations are the quasi-harmonic method and direct molecular dynamics, respectively. These are discussed presently.
 
 \subsection{The quasi-harmonic method} 
 
-The quasi-harmonic method obtains the self-diffusion coefficient as a solution to Eq. (\ref{eq:3}). The quasi-harmoninc temperature dependent lattice constants are obtained by applying the harmonic approximation at a set of discreet volumes. By performing harmonic approximation at each of these lattice constants, the free energy of vacancy formation used to compute the vacancy concentration is obtained. The phonons from this approximation are then used to compute the attempt frequency using Vineyard's transition state theory \cite{Vineyard1957}, and the migraiton enthalpy is determined using the nudged elastic band method \cite{Henkelman2000}.
+The quasi-harmonic method obtains the self-diffusion coefficient as a solution to Eq. (\ref{eq:3}). The quasi-harmonic temperature dependent lattice constants are obtained by applying the harmonic approximation at a set of discreet volumes. By performing harmonic approximation at each of these lattice constants, the free energy of vacancy formation used to compute the vacancy concentration is obtained. The phonons from this approximation are then used to compute the attempt frequency using Vineyard's transition state theory \cite{Vineyard1957}, and the migraiton enthalpy is determined using the nudged elastic band method \cite{Henkelman2000}.
 
 \subsubsection{Vineyard's approximation}
 
@@ -201,11 +201,11 @@ The quasi-harmonic method obtains the self-diffusion coefficient as a solution t
 \Gamma = \dfrac{\displaystyle \prod_{i=1}^{3N-3}\nu_i}{\displaystyle \prod_{i=1}^{3N-4}\nu_i^\prime} \exp\left(\dfrac{-H^v_m}{k_BT}\right)
 \end{equation}
 %
-where $H^v_m$ is the enthalpy of vacancy migration, $\nu_i$ and $\nu_i^\prime$ are the phonon frequencies of the $i^{th}$ atomin the equilibrium state and the transition state respectively. The imaginary frequency of the unstable vibration mode of the transition state due to negative curvature of the energy-diagram for motion in the direction of motion of the vacancy, is excluded from the product in the denominator.
+where $H^v_m$ is the enthalpy of vacancy migration, $\nu_i$ and $\nu_i^\prime$ are the phonon frequencies of the $i^{th}$ atom in the equilibrium state and the transition state respectively. The imaginary frequency of the unstable vibration mode of the transition state due to negative curvature of the energy-diagram for motion in the direction of motion of the vacancy, is excluded from the product in the denominator.
 
 \subsubsection{Quasi-Harmonic Approximation (QHA)} 
 
-\noindent The energetics computed at $T=0$K using an appropriate potential are scaled to finite temperatures using the quasi-harmonic approximation. By making small displacements to the atoms in the equilibrium state, where the force/energy response is well approximated by a harmonic potential, phonons are calculated. This forms the \enquote*{harmonic} part of the QHA. By considering harmonic approximation at the different volumes resulting from these displacements, a volume dependence in the phonon free energy description can be obtained by,
+\noindent The energetics computed at $T=0$ K using an appropriate potential are scaled to finite temperatures using the quasi-harmonic approximation. By making small displacements to the atoms in the equilibrium state, where the force/energy response is well approximated by a harmonic potential, phonons are calculated. This forms the \enquote*{harmonic} part of the QHA. By considering harmonic approximation at the different volumes resulting from these displacements, a volume dependence in the phonon free energy description can be obtained by,
 %
 \begin{equation} \label{eq:7}
 F^{\mathrm{phonon}}(T, V) = k_B T\sum_{i=1}^{3N} \ln \left[2 \sinh \left(\dfrac{h \upsilon_i(V)}{k_B T}\right)\right]
@@ -214,7 +214,7 @@ F^{\mathrm{phonon}}(T, V) = k_B T\sum_{i=1}^{3N} \ln \left[2 \sinh \left(\dfrac{
 The Gibbs free energy $G$ resulting from this approximation is given by
 %
 \begin{equation} \label{eq:8}
-G(T)=\min_{V}[E^{\mathrm{static}}(V) +  F^{\mathrm{phonon}}(T, V) + PV]
+G(T, P)=\min_{V}[E^{\mathrm{static}}(V) +  F^{\mathrm{phonon}}(T, V) + PV]
 \end{equation}
 %
 where $E^{\mathrm{static}}$ is the electronic ground state energy at volume $V$ and pressure $P$, $N$ is the number of dynamic atoms in the system, $\upsilon_i$ is the normal phonon frequency for the $i^{th}$ atom, and $h$ is the Planck's constant. 
@@ -248,7 +248,7 @@ which is the full force due to the potential, with the component along the elast
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=1.2]{neb}
-\caption{An initial band (dotted line) interpolated between the energy minima on a energy landscape converges to the minimum energy path (solid line) using the NEB method. The blue and red areas of the energy landscape represent the low and high energy configurations respectively. The \enquote*{climbing image} is colored green.}
+\caption{An initial band (dotted line) interpolated between the energy minima on a energy landscape converges to the minimum energy path (solid line) using the NEB method. The blue and red areas of the energy landscape represent the low and high energy configurations respectively. The \enquote*{climbing image} is colored green}
  \label{fig:3}
 \end{figure}
 
@@ -260,7 +260,7 @@ It is thus possible to compute all the quantities entering Eq. (\ref{eq:3}) and 
 
 \noindent Although QHA accounts for thermal expansion of the structure as a whole, it does not account for the local thermal expansion in the lattice regions around the defect, which may be somewhat different from the overall expansion and can become significant as anharmonicity kicks in at increased temperatures. At high temperatures, the amplitudes of the individual atomic vibrations can become so large, that the assumed quadratic expansion of energy at each temperature is no longer adequate. Therefore, QHA can only be considered accurate at relatively low temperatures \cite{Mendelev2009}.
 
-The MEP obtained from the NEB method depends on local characteristics of the potential energy landscape, wherein the path is always parallel to the energy gradient. Non-local features in the direction perpendicular to the path which may arise due to anharmonic vibrations at higher temperatures are not accounted for. As temperature increases from $0K$, the minimum energy path does not necessarily remain the minimum free energy path due to increasing entropic effects \cite{Vanden-Eijnden2009}, corrections for which are not included in the quasi-harmonic method.
+The MEP obtained from the NEB method depends on local characteristics of the potential energy landscape, wherein the path is always parallel to the energy gradient. Non-local features in the direction perpendicular to the path which may arise due to anharmonic vibrations at higher temperatures are not accounted for. As temperature increases from $0$ K, the minimum energy path does not necessarily remain the minimum free energy path due to increasing entropic effects \cite{Vanden-Eijnden2009}, corrections for which are not included in the quasi-harmonic method.
 
 \subsection{Molecular dynamics (MD)}
 
@@ -276,29 +276,29 @@ Till date, only fully anharmonic vacancy formation energies have been computed f
 
 \subsection{An alternate approach - The Finite Temperature String (FTS) method}
 
-A alternate method for computing self-diffusion coefficients is the Finite Temperature String (FTS) method \cite{Weinan2005, Vanden-Eijnden2009}. The FTS method is a method for the study of rare events such as conformation changes in molecules, chemical reactions, kinetic phase transitions etc., all of which are activated processes. The mechanisms of such processes can be explained by identifying the path along which this process takes place. Since diffusion is also an activated process, this method can in theory, be used to compute self-diffusion coefficients. For a system with two stable states with several unstable states in between, the Boltzmann-Gibbs distribution gives the probability that a system will be in a certain state as a function of the energy of that state and the temperature of the system. A principle curve \cite{Hastie1989} calculated from such a distribution gives the transition pathway between the two stable states. 
+A alternate method for computing self-diffusion coefficients is the Finite Temperature String (FTS) method \cite{Vanden-Eijnden2009, Weinan2005}. The FTS method is a method for the study of rare events such as conformation changes in molecules, chemical reactions, kinetic phase transitions etc., all of which are activated processes. The mechanisms of such processes can be explained by identifying the path along which this process takes place. Since diffusion is also an activated process, this method can in theory, be used to compute self-diffusion coefficients. For a system with two stable states with several unstable states in between, the Boltzmann-Gibbs distribution gives the probability that a system will be in a certain state as a function of the energy of that state and the temperature of the system. A principle curve \cite{Hastie1989} calculated from such a distribution gives the transition pathway between the two stable states. 
 
 In general, a principal curve is such that its intersection with each of the hyperplanes perpendicular to itself in some appropriate metric coincides with the averaged position of the system in these planes \cite{Hastie1989}. As a result, the principal curves tend to follow low lying channels on the underlying energy or free energy landscapes and, unlike more standard paths such as the minimum energy path or the minimum free energy path, their location depends more globally on the properties of these landscapes. In particular, they permit the smoothing out of the features of the landscape that are below the thermal energy scale and account for non-local contributions related to the width of the channels. It can thereby remain appropriate in situations where the landscape is rough due to thermal fluctuations, anharmonicity and/or non-local entropic effects, as illustrated in Fig. \ref{fig:5}. This was the original formulation of the FTS method \cite{Weinan2005}.
 
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=1.2]{MEP_fts}
-\caption{The principal curve (black dots) of the finite temperature string method converges to the reaction tube (white/grey areas) on a rough energy landscape. The sections within black lines are the Voronoi cells within which the system is sampled using MD. Figure used with permission from \cite{Vanden-Eijnden2009}.}
+\caption{The principal curve (black dots) of the finite temperature string method converges to the reaction tube (white/grey areas) on a rough energy landscape shown as contours in the figure. To represent regions of high and low energies, the color gradient changes from yellow to red respectively. Each region bounded by black lines is a Voronoi cell. Within these cells the system is sampled using MD. Figure used with permission from \cite{Vanden-Eijnden2009}}
  \label{fig:4}
 \end{figure}
 
-An improvement to method, which eliminates the hyperplanes used in the original formulation replaces these planes by Voronoi cells. The principal curve or \enquote*{string} is calculated simply sampling the system using MD constrained within Voronoi cells, whose generating points are the \enquote*{centroids} along the string. Each Voronoi cell comprises of the region in configuration space that is closer to its generating centroid than to any other centroid along the string. The Voronoi cells converge toward the original planes in the limit of infinitely many centroids along the string. When the number of centroids along the string is finite, however, using Voronoi cells rather than planes permits to simplify the FTS algorithm at the cost of a higher computational expense. The distribution of samples within each of the Voronoi cells forms a single \enquote*{reaction tube} within which the transition can be said to occur. The FTS method will, however, fail if this single tube bifurcates, as both the branches will have the same probability of being the transition path. Thus accurate convergence to either one of the branches will not be achieved.
+An improvement to the method, which eliminates the hyperplanes used in the original formulation replaces these planes by Voronoi cells. The principal curve or \enquote*{string} is calculated simply sampling the system using MD constrained within Voronoi cells, whose generating points are the \enquote*{centroids} along the string. Each Voronoi cell comprises of the region in configuration space that is closer to its generating centroid than to any other centroid along the string. The Voronoi cells converge toward the original planes in the limit of infinitely many centroids along the string. When the number of centroids along the string is finite, however, using Voronoi cells rather than planes permits to simplify the FTS algorithm at the cost of a higher computational expense. The distribution of samples within each of the Voronoi cells forms a single \enquote*{reaction tube} within which the transition can be said to occur. The FTS method will, however, fail if this single tube bifurcates, as both the branches will have the same probability of being the transition path. Thus accurate convergence to either one of the branches will not be achieved.
 
 By employing a collision rule at the boundaries of the cells to keep the trajectory inside these cells, while at the same time moving the cells consistently with the sampling output, the centroids can be dragged to the most stable configuration within its respective confines \cite{Vanden-Eijnden2009}. The \enquote*{converged} string is thus along the expected path that the system would take to get from one stable state to another at a given temperature.
 
-Integrating the forces along each centroid configuration up to the saddle point (transition state) gives the \enquote*{virtual work} done by the system to get from the stable state to the saddle point \cite{Swinburne2017}, which is by definition of free energy, the free energy of moving from the stable state to the saddle point. Alternatively, by keeping track of the number of times any given state attempts to change to any another state, and the time between each successive attempt, it is possible to determine the rate at which a system changes from one state to another by the \enquote*{Markovian milestoning} \cite{Vanden-Eijnden2009a} technique.
+Integrating the forces along each centroid configuration up to the saddle point (transition state) gives the \enquote*{virtual work} done by the system to get from the stable state to the saddle point \cite{Swinburne2017}, which is by definition, the free energy of moving from the stable state to the saddle point. Alternatively, by keeping track of the number of times any given state attempts to change to any another state, and the time between each successive attempt, it is possible to determine the rate at which a system changes from one state to another by the \enquote*{Markovian milestoning} \cite{Vanden-Eijnden2009a} technique.
 
 If applied to two structures at equilibrium, one with a vacancy at lattice site $m$ and the other with a vacancy at an adjacent lattice site $m+1$ at a given temperature, the transition path is obtained from the FTS method. From this path, the free energy of vacancy migration can be computed using the virtual work principle. Independent of the converged string of the FTS method, the jump frequency (or rate of transition) of the migrating atom can be computed directly using the milestoning technique. By obtaining the temperature dependent lattice constant from a regular MD simulation, and the free energy of vacancy formation from thermodynamic integration, fully anharmonic self-diffusion coefficients can be computed using Eq. (\ref{eq:3}).
 
 \begin{figure}[htp]
 \centering
 \includegraphics{FTS_anharmonic}
-\caption{On an anharmonic energy landscape (along the z-direction), NEB (black line with 7 black points) takes the minimum energy path, ignoring the anharmonicity in the top left corner. FTS (red line with 7 red dots) on the other hand, evolves towards this anharmonicity. The blue and red areas of the energy landscape represent the low and high energy configurations respectively.}
+\caption{On an anharmonic energy landscape (along the z-direction), NEB (black line with 7 black points) takes the minimum energy path, ignoring the anharmonicity in the top left corner. FTS (red line with 7 red dots) on the other hand, evolves towards this anharmonicity. The blue and red areas of the energy landscape represent the low and high energy configurations respectively. The red dot in the plot represents the minimum free energy of the system at a given temperature, which is higher than the minimum energy represented by the black dot}
 \label{fig:5}
 \end{figure}
 
@@ -317,7 +317,7 @@ The string evolution module implements the bulk of the FTS method. The objective
 
 \paragraph*{Initialization:}
 
-During initialization, the initial structure (structure with a vacancy at lattice site $m$), the final strcuture (structure with a vacancy at an adjacent lattice site $m+1$), the semi-empirical interatomic potential (e.g. EAM potential), the number of centroid configurations $(N + 1)$ to be interpolated along the trajectory and the necessary parameters for the subsequent steps (which will be addressed in the steps where they are used) are defined. 
+During initialization, the initial structure (structure with a vacancy at lattice site $m$), the final structure (structure with a vacancy at an adjacent lattice site $m+1$), the semi-empirical interatomic potential (e.g. EAM potential), the number of centroid configurations $(N + 1)$ to be interpolated along the trajectory and the necessary parameters for the subsequent steps (which will be addressed in the steps where they are used) are defined. 
 
 \paragraph*{Interpolation:}
 
@@ -462,7 +462,7 @@ the difference being that the velocity is reversed. Thus a \enquote*{reflection}
 
 \paragraph*{Thermalization:}
 
-A thermalization check is performed to ensure that the simulation has run long enough for system to equilibrate to the temperature that the thermostat simulates. If the number of the present step $n$ is greater than the number of thermalization steps $n_T$ the system is thermalized and the next node is executed. Otherwise, the convergence check is performed again.
+A thermalization check is performed to ensure that the simulation has run long enough for the system to equilibrate to the temperature that the thermostat simulates. If the number of the present step $n$ is greater than the number of thermalization steps $n_T$ the system is thermalized and the next node is executed. Otherwise, the convergence check is performed again.
 
 \paragraph*{Running average:}
 
@@ -478,7 +478,7 @@ where $n_T$ is the number of thermalization steps.
 
 \paragraph*{Sampling:}
 
-In order to ensure that enough configuration samples within each Voronoi cell have been included into the running average, a sampling check is performed. This is a modification to the improved FTS algorithm \cite{Vanden-Eijnden2009} made in this thesis. The reason for doing this is that with increasing temperature, the configurational space within a Voronoi cell available to an image to explore grows. The number of samples that then need to be averaged to get an accurate running average configuration within that cell also increases. If the number of the present step is an integer multiple of the number of sample steps, the next node is executed. Otherwise, the subroutine for updating the string centroids is passed over and convergence check is performed again.
+In order to ensure that enough configuration samples within each Voronoi cell have been included into the running average, a sampling check is performed. This is a modification to the improved FTS algorithm \cite{Vanden-Eijnden2009} made in this thesis. The reason for doing this is that with increasing temperature, the configuration space within a Voronoi cell available to an image to explore grows. The number of samples that then need to be averaged to get an accurate running average configuration within that cell also increases. If the number of the present step is an integer multiple of the number of sample steps, the next node is executed. Otherwise, the subroutine for updating the string centroids is passed over and convergence check is performed again.
 
 \paragraph*{Mix:}
 
@@ -555,10 +555,10 @@ Following this node, the convergence check performed.
 In the context of atomic migration, work is done in moving an atom from one lattice point to an adjacent lattice point with a vacancy. Since work is a path function, it depends not only on the initial and final position of the atom, but also on the path taken by it. Each centroid along the converged string obtained from the string evolution module, is a configuration of the structure around the migrating atom as it migrates. From these centroids it is then possible to compute the \enquote*{virtual work} $W$, in moving the atom from its equilibrium position to the saddle point, and is given by,
 %
 \begin{equation} \label{eq:34}
-W(\bm{\varphi}_{\alpha=0, ..., \mathrm{saddle}}) = - \int_{\bm{\varphi}_{0}}^{\bm{\varphi}_{\mathrm{saddle}}} \bm{f}(\bm{\varphi}_{\alpha}) \cdot d\bm{\varphi}_{\alpha}
+W(\bm{\varphi}^n_{\alpha=0, ..., \mathrm{saddle}}) = - \int_{\bm{\varphi}^n_{0}}^{\bm{\varphi}^n_{\mathrm{saddle}}} \bm{f}(\bm{\varphi}^n_{\alpha}) \cdot d\bm{\varphi}^n_{\alpha}
 \end{equation}
 % 
-where $\bm{f}(\bm{\varphi}_{\alpha})$ are the forces computed at the converged centroids $\bm{\varphi}_{\alpha}$.
+where $\bm{f}(\bm{\varphi}^n_{\alpha})$ are the forces computed at the converged centroids $\bm{\varphi}^n_{\alpha}$.
 
 The movement of this atom can be conversely seen as the movement of the associated vacancy. Therefore, the virtual work $W(T)$ done in moving the vacancy from its equilibrium position to its saddle point at a given temperature $T$, by definition of free energy, is the free energy of vacancy migration, $F_{m}^{v}(T)$ at that temperature $T$,
 %
@@ -692,7 +692,7 @@ The reciprocal of $T_0^{N_e}$ gives the jump frequency of the atom $\Gamma$ at t
 
 \subsection{Thermodynamic Integration using Langevin Dynamics (TILD)} \label{TILD}
 
-By replacing the potential energies of the total system used to calculate the vacancy formation energy at 0K with thermal averages at the desired temperature, the Helmholtz free energy of vacancy formation $F_f^v$ can be computed as,
+By replacing the potential energies of the total system used to calculate the vacancy formation energy at 0 K with thermal averages at the desired temperature, the Helmholtz free energy of vacancy formation $F_f^v$ can be computed as,
 %
 \begin{equation} \label{eq:42}
 F_f^v(T) = \langle E^v \rangle_T - \frac{N-1}{N} \langle E^b \rangle_T
@@ -704,7 +704,7 @@ While vacancy formation energies are fairly small ($\approx 1$ eV), the energy o
 
 In order to circumvent this problem, a modified version \cite{Wen2012} of the method proposed by de Koning et. al. \cite{deKoning} to thermodynamically integrate between bulk and vacancy states is used in this thesis. This approach differs from that outlined in \cite{deKoning} in two ways: first, the calculations are run in the $NVT$ ensemble at the (thermally relaxed) bulk lattice constant to calculate Helmholtz free energies, while the original formulation calculates Gibbs free energies in the $NPT$ ensemble; second, the original formulation use a continuous time-dependent coupling parameter while here integration is performed over a discrete set of coupling values.
 
-To compute the free energy of vacancy formation, an atom with some chemical potentia $\mu$ is considered. The free energy change when such an atom is transformed into a decoupled harmonic oscillator $\Delta F_\mathrm{decouple}$ is calculated using thermodynamic integration. The analytically known free energy of that oscillator $F_\mathrm{harm}$ is then subtracted off. The vacancy formation free energy $F_f^v$ is thus obtained as,
+To compute the free energy of vacancy formation, an atom with some chemical potential $\mu$ is considered. The free energy change when such an atom is transformed into a decoupled harmonic oscillator $\Delta F_\mathrm{decouple}$ is calculated using thermodynamic integration. The analytically known free energy of that oscillator $F_\mathrm{harm}$ is then subtracted off. The vacancy formation free energy $F_f^v$ is thus obtained as,
 %
 \begin{equation} \label{eq:43}
 F_f^v = \mu + \Delta F_\mathrm{decouple} - F_\mathrm{harm}
@@ -722,7 +722,7 @@ The free energy difference between $N$ harmonic oscillators and the EAM supercel
 \Delta F_\mathrm{harm \rightarrow EAM}(T, V) = \int_0^1 \langle E_\mathrm{EAM}(\lambda) - E_\mathrm{harm}(\lambda) \rangle_{\lambda, T, V} d\lambda
 \end{equation}
 %
-which integrates potential energy difference of coupled systems which evolve according to a mixture of EAM and harmonic forces, $\lambda \bm{f}_\mathrm{EAM} + (1 - \lambda) \bm{f}_\mathrm{harm}$
+which integrates the potential energy difference of coupled systems, that evolve according to a mixture of EAM and harmonic forces, $\lambda \bm{f}_\mathrm{EAM} + (1 - \lambda) \bm{f}_\mathrm{harm}$. Thermodynamic integration is further elaborated in Section \ref{TI}.
 
 The free energy change when one of the atoms is decoupled and turned it into an independent harmonic oscillator is similar, except here the forces and energies are coupled between a system with $N$ EAM atoms, and a system with $N-1$ EAM atoms and a harmonic oscillator,
 %
@@ -741,15 +741,15 @@ The analytic harmonic energy cancels out and only the energy from the two thermo
 \newpage
 \section{Computational aspects}\label{cas}
 
-All of the computations performed in this thesis were done using \enquote*{pyiron}. pyiron is a python-based integrated development environment (IDE) for implementing, testing, and running complex simulation protocols in computational materials science \cite{Janssen2019}. It supports the entire life cycle of a typical simulation by combining atomistic simulation tools like LAMMPS \cite{Plimpton1995} and VASP \cite{Kresse1993, Kresse1996a, Kresse1996}, a phonon calculator (Phonopy \cite{Togo2015}), a graphical interactive visualizer (NGLview \cite{Nguyen2018}) and several custom tools on a single, common platform. Information exchange between these tools is done seamlessly using object oriented job management, and can hence be used to implement new state-of-the-art algorithms, which require coupling results between different simulation tools. pyiron is developed in the Computational Materials Design department of Prof. Jörg Neugebauer at the Max Planck Insitut für Eisenforschung (Max Planck Insitute for Iron Research). 
+All of the computations performed in this thesis were done using \enquote*{pyiron}. pyiron is a python-based integrated development environment (IDE) for implementing, testing, and running complex simulation protocols in computational materials science \cite{Janssen2019}. It supports the entire life cycle of a typical simulation by combining atomistic simulation tools like LAMMPS \cite{Plimpton1995} and VASP \cite{Kresse1993, Kresse1996a, Kresse1996}, a phonon calculator (Phonopy \cite{Togo2015}), a graphical interactive visualizer (NGLview \cite{Nguyen2018}) and several custom tools on a single, common platform. Information exchange between these tools is done seamlessly using object oriented job management, and can hence be used to implement new state-of-the-art algorithms, which require coupling results between different simulation tools. pyiron is developed in the Computational Materials Design department of Prof. Dr. Jörg Neugebauer at the Max Planck Institut für Eisenforschung.
 
-For this thesis, fully anharmonic self-diffusion coeffiecients of Aluminium \cite{Mendelev2009a}, Nickel \cite{Mishin2004}, Cu \cite{Mendelev2008} (FCC crystal structure), Iron \cite{Ackland1997} and Molybdenum \cite{Zhou2004} (BCC crystal structure) have been computed using molecular dynamics (direct MD), the quasi-harmonic method, NEB with milestoning and the FTS with virtual work method, all within the pyiron framework. The code for the modified FTS and Markovian Milestoning algorithms was written for pyiron by me, using a graph-based structure for developing computational simulation protocols (simply called \enquote*{protocols}) developed for pyiron by Liam Huber, Dominik Gehringer and Jan Janssen. The thermodynamic integration sub-module used to compute vacancy formation energies has been written and implemented by Liam Huber. \\
+For this thesis, fully anharmonic self-diffusion coeffiecients of Aluminium \cite{Mendelev2009a}, Nickel \cite{Mishin2004}, Cu \cite{Mendelev2008} (FCC crystal structure), Iron \cite{Ackland1997} and Molybdenum \cite{Zhou2004} (BCC crystal structure) have been computed using molecular dynamics (direct MD), the quasi-harmonic method, NEB with milestoning and the FTS with virtual work method, all within the pyiron framework. The code for the modified FTS and Markovian Milestoning algorithms was written for pyiron by me, using a graph-based structure for developing computational simulation protocols (simply called \enquote*{protocols}) developed for pyiron by Dr. Liam Huber, Dominik Gehringer and Jan Janssen. The thermodynamic integration sub-module used to compute vacancy formation energies has been written and implemented by Dr. Liam Huber. \\
 
 \noindent Simulation boxes of 4x4x4 of the 4-atom cubic unit cell for the FCC species, and 2-atom cubic unit cell for the BCC species were used. Well known semi-empirical classical potentials (references next to the species mentioned above) were used with LAMMPS for all the simulations. Phonopy \cite{Togo2015} was used to perform harmonic and quasi-harmonic approximations within the quasi-harmonic method.
 
 \paragraph*{Thermal expansion:}
 
-Initially, temperature dependent lattice constants were determined using both, direct MD and QHA. For direct MD, this was done by performing an MD simulation on a box at each temperature in an NPT ensemble using a Langevin thermostat. Each simulation was run for 5 million steps, with a time step of 1 fs and a temperature damping timescale (which is the \enquote*{characteristic time} in which the temperature is equilibrated to the target temperature) of 1000 fs and a pressure damping timescale of 100 fs. The system was thermalized for 1000 time steps. The temperature dependent lattice constants were obtained from the equilibrated volume of the simulation box corresponding to each temperature. For the quasi-harmonic method, harmonic approximations made at 8 different volumes for 15 temperatures between 1K and the melting point. The free energy vs volume data at each temperature was fitted to a $4^{\mathrm{th}}$ order polynomial to obtain the minimum volume at that temperature, from which the lattice constants were determined. 
+Initially, temperature dependent lattice constants were determined using both, direct MD and QHA. For direct MD, this was done by performing an MD simulation on a box at each temperature in an NPT ensemble using a Langevin thermostat. Each simulation was run for 5 million steps, with a time step of 1 fs and a temperature damping timescale (which is the \enquote*{characteristic time} in which the temperature is equilibrated to the target temperature) of 1000 fs and a pressure damping timescale of 100 fs. The system was thermalized for 1000 time steps. The temperature dependent lattice constants were obtained from the equilibrated volume of the simulation box corresponding to each temperature. For the quasi-harmonic method, harmonic approximations made at 8 different volumes for 15 temperatures between 1 K and the melting point. The free energy vs volume data at each temperature was fitted to a $4^{\mathrm{th}}$ order polynomial to obtain the minimum volume at that temperature, from which the lattice constants were determined. 
 
 \paragraph*{Anharmonicty:}
 
@@ -784,13 +784,13 @@ Direct MD was run for temperatures above 0.5 $T_{\mathrm{melt}}$ in an NVT ensem
 \subfloat[]{\includegraphics[width=3in]{al_bulk_anharm}\label{9b}}\hfill
 \subfloat[]{\includegraphics[width=3in]{al_vac_form}\label{9c}}
 \subfloat[]{\includegraphics[width=3in]{al_vac_mig}\label{9d}}\hfill
-\caption{Aluminium: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances around the mode of these distances at 900K, calculated using the potential \cite{Mendelev2009a} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
+\caption{Aluminium: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances from an atom around the mode of these distances at 900 K, calculated using the potential \cite{Mendelev2009a} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
 \label{fig:9}
 \end{figure}
 
-\noindent Aluminium (Al) has a close-packed FCC crystal structure. The deviation of the lattice constants computed from direct MD and QHA above 400K in Fig. \ref{fig:9} (a) suggest anharmonicity in the system due to thermal expansion. This anharmonicity can be seen in Fig. \ref{fig:9} (b), where there is a shift of the first NN atoms away from their geometric position. There is a good agreement between the vacancy formation free energies from QHA and TILD in Fig. \ref{fig:9} (c), which could be a result of them being computed using different lattice constants, especially at high temperatures. The DFT curve obtained by Glesnk et al. \cite{Glensk2013} using a GGA-PBE potential in Fig. \ref{fig:9} (c) has been shifted by 0.02 eV to have the same 0K vacancy formation free energy as the TILD computed vacancy formation free energy in order to compare the obtained trends. The shifted DFT and TILD curves show a good agreement up to 600K, which shows that the classical potential does a reasonably good job in approximating the vacancy formation free energies. Using Helmholtz free energies to the Gibbs free energies also seems like a reasonable simplification at low temperatures. The deviation beyond 600K can be attributed to the outcome of this simplifying assumption, even though the deviation is small, i.e. <0.02 eV. Contrary to the Arrhenius assumption that diffusivity is a straight line in logarithmic space, and hence the vacancy migration energy is temperature independent, the temperature dependence of the vacancy migration free energies can be seen in Fig. \ref{fig:9} (d). As expected, the NEB and FTS curves deviate from each other with increasing temperature. The deviation at very low temperatures is small and could be due to the effect of smoothing the string.
+\noindent Aluminium (Al) has a close-packed FCC crystal structure. The deviation of the lattice constants computed from direct MD and QHA above 400 K in Fig. \ref{fig:9} (a) suggest anharmonicity in the system due to thermal expansion. This anharmonicity can be seen in Fig. \ref{fig:9} (b), where there is a shift of the first NN atoms away from their geometric position. There is a good agreement between the vacancy formation free energies from QHA and TILD in Fig. \ref{fig:9} (c), which could be a result of them being computed using different lattice constants, especially at high temperatures. The DFT curve obtained by Glesnk et al. \cite{Glensk2013} using a GGA-PBE potential in Fig. \ref{fig:9} (c) has been shifted by 0.02 eV to have the same 0 K vacancy formation free energy as the TILD computed vacancy formation free energy in order to compare the obtained trends. The shifted DFT and TILD curves show a good agreement up to 600 K, which shows that the classical potential does a reasonably good job in approximating the vacancy formation free energies. Using Helmholtz free energies to the Gibbs free energies also seems like a reasonable simplification at low temperatures. The deviation beyond 600 K can be attributed to the outcome of this simplifying assumption, even though the deviation is small, i.e. $<$0.02 eV. Contrary to the Arrhenius assumption that diffusivity is a straight line in logarithmic space, and hence the vacancy migration energy is temperature independent, the temperature dependence of the vacancy migration free energies can be seen in Fig. \ref{fig:9} (d). As expected, the NEB and FTS curves deviate from each other with increasing temperature. The deviation at very low temperatures is small and could be due to the effect of smoothing the string.
 
-The deviation from the direct MD and QHA computed lattice constants and vacancy formation energies at low temperatures, a behavior which is seen in all the simulated species, is due to the fact that direct MD does not take into account the zero point energies that are significant at these low temperatures. These are explicitly accounted for in the free energies from our QHA phonon calculations.
+The deviation from the direct MD and QHA computed lattice constants and vacancy formation free energies at low temperatures, a behavior which is seen in all the simulated species, is due to the fact that direct MD does not take into account the zero point energies that are significant at these low temperatures. These are explicitly accounted for in the free energies from our QHA phonon calculations.
 
 \begin{figure}[htp]
 \centering
@@ -799,7 +799,7 @@ The deviation from the direct MD and QHA computed lattice constants and vacancy 
 \label{fig:10}
 \end{figure}
 
-The self-diffusion coefficients from direct MD for Al could only be computed down to 600K, below which no atomic migration was observed in the timescales simulated. There is a very good agreement in the self-diffusion coefficients computed using direct MD and the FTS with virtual work method at high temperatures as seen in Fig. \ref{fig:10}. There is a continuation of the FTS calculated coefficients along the slope of direct MD results all the way down to temperatures lower than room temperature. The quasi-harmonic self-diffusion coefficients deviate from the direct MD results by two orders of magnitude, while coefficients from the NEB with milestoning method are too low by about a factor of 5. This underestimation of milestoning by a factor of $\approx 5$ is a common feature among all the species.
+The self-diffusion coefficients from direct MD for Al could only be computed down to 600 K from the melting point, below which no atomic migration was observed in the timescales simulated. There is a very good agreement in the self-diffusion coefficients computed using direct MD and the FTS with virtual work method at high temperatures as seen in Fig. \ref{fig:10}. There is a continuation of the FTS calculated coefficients along the slope of direct MD results all the way down to temperatures lower than room temperature. The quasi-harmonic self-diffusion coefficients deviate from the direct MD results by two orders of magnitude, while coefficients from the NEB with milestoning method are too low by about a factor of 5. This underestimation of milestoning by a factor of $\approx 5$ is a common feature among all the species.
 
 \subsubsection{Nickel}
 
@@ -809,11 +809,11 @@ The self-diffusion coefficients from direct MD for Al could only be computed dow
 \subfloat[]{\includegraphics[width=3in]{ni_bulk_anharm}\label{11b}}\hfill
 \subfloat[]{\includegraphics[width=3in]{ni_vac_form}\label{11c}}
 \subfloat[]{\includegraphics[width=3in]{ni_vac_mig}\label{11d}}\hfill
-\caption{Nickel: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances around the mode of these distances at 1650K, calculated using the potential \cite{Mishin2004} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
+\caption{Nickel: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances from an atom around the mode of these distances at 1650 K, calculated using the potential \cite{Mishin2004} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
 \label{fig:11}
 \end{figure}
 
-Similar to Al, Nickel (Ni) also has a close packed FCC crystal structure. The deviations in the lattice constants from direct MD and QHA start as low 300K, as seen in Fig. \ref{fig:11} (a). The shift of the first NN atoms away from their geometric position in Fig. \ref{fig:11} (b) shows bulk anharmonicity at high temperatures. The TILD computed vacancy formation free energies deviate from the trend of the shifted (by 0.2 eV) DFT vacancy formation free energy curve obtained by Gong et al. \cite{Gong2018} using a GGA-PBE potential, as temperature increases. Further, as can be seen in Fig. \ref{fig:11} (c), the QHA and TILD computed formation free energies decrease only by about 0.1 eV, when compared to the DFT computed formation free energies, which decrease by 0.3 eV. This deviation may be a result of using an empirical potential that does not accurately represent DFT behavior for this quantity. It may also be possible that the simplifying assumption of using Helmholtz free energies instead of Gibbs free energies is inadequate. The unevenness in the migration barrier computed from FTS compared to the barrier obtained from NEB in Fig. \ref{fig:11} (d) can be attributed to thermal noise, as the magnitude by which the barrier varies with temperature is about 0.01 eV. However, the trend of the FTS curve still deviates from the NEB curve as expected, similar to Al. In this case, FTS also overestimates the migration barrier at very low temperatures by about 0.03 eV. As indicated in the case of Al, deviations from the NEB migration barriers at very low temperatures can be caused by smoothing the string. However, as can be seen in section \ref{smooth}, a deviation of 0.03 eV is large for a nominal smoothing of 0.1. A possible reason could be that the number of string updates towards the running average of the images is insufficient.
+Similar to Al, Nickel (Ni) also has a close packed FCC crystal structure. The deviations in the lattice constants from direct MD and QHA start as low 300 K, as seen in Fig. \ref{fig:11} (a). The shift of the first NN atoms away from their geometric position in Fig. \ref{fig:11} (b) shows bulk anharmonicity at high temperatures. The TILD computed vacancy formation free energies deviate from the trend of the shifted (by 0.2 eV) DFT vacancy formation free energy curve obtained by Gong et al. \cite{Gong2018} using a GGA-PBE potential, as temperature increases. Further, as can be seen in Fig. \ref{fig:11} (c), the QHA and TILD computed formation free energies decrease only by about 0.1 eV, when compared to the DFT computed formation free energies, which decrease by 0.3 eV. This deviation may be a result of using an empirical potential that does not accurately represent DFT behavior for this quantity. It may also be possible that the simplifying assumption of using Helmholtz free energies instead of Gibbs free energies is inadequate. The unevenness in the migration barrier computed from FTS compared to the barrier obtained from NEB in Fig. \ref{fig:11} (d) can be attributed to thermal noise, as the magnitude by which the barrier varies with temperature is about 0.01 eV. However, the trend of the FTS curve still deviates from the NEB curve as expected, similar to Al. In this case, FTS also overestimates the migration barrier at very low temperatures by about 0.03 eV. As indicated in the case of Al, deviations from the NEB migration barriers at very low temperatures can be caused by smoothing the string. However, as can be seen in section \ref{smooth}, a deviation of 0.03 eV is large for a nominal smoothing of 0.01. A possible reason could be that the number of string updates towards the running average of the images is insufficient.
 
 \begin{figure}[htp]
 \centering
@@ -822,7 +822,7 @@ Similar to Al, Nickel (Ni) also has a close packed FCC crystal structure. The de
 \label{fig:12}
 \end{figure}
 
-Atomic migration for Ni was obtained only above 1150K, which is why self-diffusion coefficients from direct MD could only be obtained beyond this temperature. This shows the limitations of the direct MD method for computing quantities like diffusion coefficients. The self-diffusion coefficients from the FTS with virtual work method are larger by a factor of 5 from the direct MD coefficients at 1250K, and this trend continues down to lower temperatures, as seen in Fig. \ref{fig:12}. The slight overestimation of the self-diffusion coefficient computed using the FTS with virtual work method when compared to direct MD at high temperatures, could be associated to the assumption in Eyring's reaction rate theory, that once the migration barrier is crossed, diffusion always takes place. The quasi-harmonic self-diffusion coefficients deviate from the direct MD results by about two orders of magnitude at high temperatures and further at lower temperatures, while the NEB with milestoning results are lower by about a factor of 5 from the direct MD results.
+Atomic migration for Ni was obtained only above 1150 K, which is why self-diffusion coefficients from direct MD could only be obtained beyond this temperature. This shows the limitations of the direct MD method for computing quantities like diffusion coefficients. The self-diffusion coefficients from the FTS with virtual work method are larger by a factor of 5 from the direct MD coefficients at 1250 K, and this trend continues down to lower temperatures, as seen in Fig. \ref{fig:12}. The slight overestimation of the self-diffusion coefficient computed using the FTS with virtual work method when compared to direct MD at high temperatures, could be associated to the assumption in Eyring's reaction rate theory, that once the migration barrier is crossed, diffusion always takes place, which may not be the case in reality. The quasi-harmonic self-diffusion coefficients deviate from the direct MD results by about two orders of magnitude at high temperatures and further at lower temperatures, while the NEB with milestoning results are lower by about a factor of 5 from the direct MD results.
 
 \subsubsection{Copper}
 
@@ -832,11 +832,11 @@ Atomic migration for Ni was obtained only above 1150K, which is why self-diffusi
 \subfloat[]{\includegraphics[width=3in]{cu_bulk_anharm}\label{13b}}\hfill
 \subfloat[]{\includegraphics[width=3in]{cu_vac_form}\label{13c}}
 \subfloat[]{\includegraphics[width=3in]{cu_vac_mig}\label{13d}}\hfill
-\caption{Copper: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances around the mode of these distances at 1200K, calculated using the potential \cite{Mendelev2008} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
+\caption{Copper: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances from an atom around the mode of these distances at 1200 K, calculated using the potential \cite{Mendelev2008} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
 \label{fig:13}
 \end{figure}
 
-Copper (Cu) which also has a close packed FCC crystal structure, shows a thermal expansion behavior similar to Ni: the lattice constants from direct MD and QHA shown in Fig. \ref{fig:13} (a) start deviating at around 200K, giving a maximum deviation of about 0.05 eV at the highest simulated temperature of 1200K. Cu also exhibits similar anharmonic behavior as Al and Ni, wherein the first NN atoms move away from their geometric position as seen in Fig. \ref{fig:13} (b). The vacancy formation free energies computed from TILD in Fig. \ref{fig:10} (c) follow a different trend from the QHA ones. The deviation between the TILD computed vacancy formation free energies and the trend of the shifted (by 0.1 eV) DFT formation free energies obtained by Glesnk et al. \cite{Glensk2013} from a GGA-PBE potential increases with increasing temperature, similar to that observed for Ni. However, the change in the formation free energies from the two curves with increasing temperature is comparable. This may once again be a result of using a DFT inaccurate potential. There is a significant deviation in the migration barrier from NEB to the the one computed using FTS, with increasing temperature showing clearly that the transition paths computed by the two methods are significantly different. FTS once again overestimates the migration barrier at very low temperatures by about 0.02 eV. 
+Copper (Cu) which also has a close packed FCC crystal structure, shows a thermal expansion behavior similar to Ni: the lattice constants from direct MD and QHA shown in Fig. \ref{fig:13} (a) start deviating at around 200 K. Cu also exhibits similar anharmonic behavior as Al and Ni, wherein the first NN atoms move away from their geometric position as seen in Fig. \ref{fig:13} (b). The vacancy formation free energies computed from TILD in Fig. \ref{fig:10} (c) follow a different trend from the QHA ones. The deviation between the TILD computed vacancy formation free energies and the trend of the shifted (by 0.1 eV) DFT formation free energies obtained by Glesnk et al. \cite{Glensk2013} from a GGA-PBE potential increases with increasing temperature, similar to that observed for Ni. However, the change in the formation free energies from the two curves with increasing temperature is comparable. This may once again be a result of using a DFT inaccurate potential. There is a significant deviation in the migration barrier from NEB to the the one computed using FTS, with increasing temperature showing clearly that the transition paths computed by the two methods are significantly different. FTS once again overestimates the migration barrier at very low temperatures by about 0.02 eV. 
 
 \begin{figure}[htp]
 \centering
@@ -845,7 +845,7 @@ Copper (Cu) which also has a close packed FCC crystal structure, shows a thermal
 \label{fig:14}
 \end{figure}
 
-No atomic migration could be simulated below 900K using direct MD. Like Al, an excellent agreement between the direct MD and FTS computed self-diffusion coefficients can be observed at high temperatures in Fig. \ref{fig:14} with a very slight overestimate. The FTS computed coefficients continue along the slope of the direct MD coefficients to lower temperatures. The quasi-harmonic self-diffusion coefficients deviate from the direct MD results by less than an order of magnitude at high temperatures and deviate further at lower temperatures, and the NEB with milestoning method is lower yet again by about a factor of 5 from the direct MD results, which suggests that some quantity is not being accounted for.
+No atomic migration could be simulated below 900 K using direct MD. Like Al, an excellent agreement between the direct MD and FTS computed self-diffusion coefficients can be observed at high temperatures in Fig. \ref{fig:14} with a very slight overestimate. The FTS computed coefficients continue along the slope of the direct MD coefficients to lower temperatures. The quasi-harmonic self-diffusion coefficients deviate from the direct MD results by less than an order of magnitude at high temperatures and deviate further at lower temperatures, and the NEB with milestoning method is lower yet again by about a factor of 5 from the direct MD results, which suggests that some quantity is not being accounted for.
 
 \subsubsection{Iron}
 
@@ -855,11 +855,11 @@ No atomic migration could be simulated below 900K using direct MD. Like Al, an e
 \subfloat[]{\includegraphics[width=3in]{fe_bulk_anharm}\label{13b}}\hfill
 \subfloat[]{\includegraphics[width=3in]{fe_vac_form}\label{13c}}
 \subfloat[]{\includegraphics[width=3in]{fe_vac_mig}\label{13d}}\hfill
-\caption{Iron: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances around the mode of these distances at 1750K, calculated using the potential \cite{Ackland1997} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
+\caption{Iron: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances from an atom around the mode of these distances at 1750 K, calculated using the potential \cite{Ackland1997} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
 \label{fig:15}
 \end{figure}
 
-Iron (Fe) has a less dense BCC crystal structure as its stable structure. Deviation between the lattice constants computed from direct MD and QHA start at 200 K as shown in Fig. \ref{fig:15} (a). Unlike the species with an FCC structure, the first NN distance seems to decrease from the geometric first NN distance with increasing temperature, which means the first NN atoms move towards the atom as temperature increases. The shift of the peak of the Gaussian distribution in Fig. \ref{fig:15} (b) and the corresponding negative skewness of the distribution is further evidence of this attractive behavior between the Fe atoms. A possible explanation for this could be the large cohesive energy of the Fe atoms (-4.3 eV / atom \cite{Ackland1997}). Cohesive energies of the species may be helpful in understanding bulk anharmonic behavior, and is discussed in more detail in section \ref{bulk_anharm}. As shown in Fig. \ref{fig:15} (c), the TILD vacancy formation free energies deviate even at low temperatures form the QHA computed formation free energies, and drop significantly with increasing temperature, by about 0.3 eV from the 0K formation energies. The increase in the trend of the migration barriers  in Fig. \ref{fig:15} (d) with increasing temperature can be justified by using the observation that first NN atoms move towards a given atom: as temperature increases, the atoms are much closer to each other and tightly bound, thus creating a less favorable local energy landscape along which the NN atom has to traverse to migrate to a vacancy site. After a constant deviation of 0.012 eV up to 600K, the FTS and NEB computed migration barriers deviate significantly.
+Iron (Fe) has a less dense BCC crystal structure as its stable structure. Deviation between the lattice constants computed from direct MD and QHA start at 200 K as shown in Fig. \ref{fig:15} (a). Unlike the species with an FCC structure, the first NN distance seems to decrease from the geometric first NN distance with increasing temperature, which means the first NN atoms move towards the atom as temperature increases. The shift of the peak of the Gaussian distribution in Fig. \ref{fig:15} (b) and the corresponding negative skewness of the distribution is further evidence of this attractive behavior between the Fe atoms. A possible explanation for this could be the large cohesive energy of the Fe atoms (-4.3 eV / atom \cite{Ackland1997}). Cohesive energies of the species may be helpful in understanding bulk anharmonic behavior, and is discussed in more detail in section \ref{bulk_anharm}. As shown in Fig. \ref{fig:15} (c), the TILD vacancy formation free energies deviate even at low temperatures form the QHA computed formation free energies, and drop significantly with increasing temperature, by about 0.3 eV from the 0 K formation energies. The increase in the trend of the migration barriers  in Fig. \ref{fig:15} (d) with increasing temperature can be justified by using the observation that first NN atoms move towards a given atom: as temperature increases, the atoms are much closer to each other and tightly bound, thus creating a less favorable local energy landscape along which the NN atom has to traverse to migrate to a vacancy site. After a constant deviation of 0.012 eV up to 600 K, the FTS and NEB computed migration barriers deviate significantly.
 
 \begin{figure}[htp]
 \centering
@@ -868,7 +868,7 @@ Iron (Fe) has a less dense BCC crystal structure as its stable structure. Deviat
 \label{fig:16}
 \end{figure}
 
-The self-diffusion coefficients computed using different methods are shown in Fig. \ref{fig:16}. Right away, it its noticeable that the difference between the direct MD and QHA computed coefficients is smaller than the difference for the FCC species. This can be understood as a cancellation of errors: since the vacancy formation free energy decreases and vacancy migration free energy remains almost constant with increasing temperature, the errors from the quasi-harmonic method would cancel out to give a diffusion coefficient that agrees well with direct MD. The self-diffusion coefficient computed from the NEB with milestoning method is sill lower by about a factor of 5 at high temperatures, which in this case also happens to be the same factor by which the quasi-harmonic coefficients are lower by.
+The self-diffusion coefficients computed using different methods are shown in Fig. \ref{fig:16}. Right away, it its noticeable that the difference between the direct MD and QHA computed coefficients is smaller than the difference for the FCC species. This could be understood as a cancellation of errors: since the vacancy formation free energy decreases and vacancy migration free energy remains almost constant with increasing temperature, the errors from the quasi-harmonic method would cancel out to give a diffusion coefficient that agrees well with direct MD. The self-diffusion coefficient computed from the NEB with milestoning method is sill lower by about a factor of 5 at high temperatures, which in this case, also happens to be the same factor by which the quasi-harmonic coefficients are lower by.
 
 \subsubsection{Molybdenum}
 
@@ -878,11 +878,11 @@ The self-diffusion coefficients computed using different methods are shown in Fi
 \subfloat[]{\includegraphics[width=3in]{mo_bulk_anharm}\label{13b}}\hfill
 \subfloat[]{\includegraphics[width=3in]{mo_vac_form}\label{13c}}
 \subfloat[]{\includegraphics[width=3in]{mo_vac_mig}\label{13d}}\hfill
-\caption{Molybdenum: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances around the mode of these distances at 2800K, calculated using the potential \cite{Zhou2004} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
+\caption{Molybdenum: (a) Thermal expansion as a function of temperature, (b) Gaussian distribution of the first NN distances from an atom around the mode of these distances at 2800 K, calculated using the potential \cite{Zhou2004} and a harmonic oscillator, (c) Vacancy formation free energy and (d) Migration barrier as a function of temperature}
 \label{fig:17}
 \end{figure}
 
-Molybdenum (Mo), which has a high melting temperature of 2896K has a stable BCC crystal structure. When compared to the other species studied in this thesis so far, the lattice constants obtained from direct MD and QHA for Mo are in every good agreement up to 1600K, beyond which they deviate slightly giving a maximum deviation of 0.01eV at the 2800K, as seen in Fig. \ref{fig:17} (a). The behavior where the first NN atoms move towards the atom as temperature increases as seen in Fe, is also seen in Mo, as can be inferred from the Fig. \ref{fig:17} (b). The vacancy formation energies from TILD have the same trend as Fe but agree with QHA computed formation free energies below 500K as shown in Fig. \ref{fig:17} (c). From Fig. \ref{fig:17} (d), the migration barrier for Mo grows quickly by about 0.3 eV from 0 to 0.75 $T_{\mathrm{melt}}$ when compared to Fe, where it increases by 0.05 eV for the same range. The NEB computed migration barrier meanwhile, remains almost a constant.
+Molybdenum (Mo), which has a high melting temperature of 2896 K has a stable BCC crystal structure. When compared to the other species studied in this thesis so far, the lattice constants obtained from direct MD and QHA for Mo are in every good agreement up to 1600 K, beyond which they deviate slightly as seen in Fig. \ref{fig:17} (a). The behavior where the first NN atoms move towards the atom as temperature increases as seen in Fe, is also seen in Mo, as can be inferred from Fig. \ref{fig:17} (b). The vacancy formation free energies from TILD have the same trend as Fe, but agree with QHA computed formation free energies below 500 K as shown in Fig. \ref{fig:17} (c). From Fig. \ref{fig:17} (d), it is evident that the migration barrier for Mo grows quickly by about 0.3 eV from 0 to 0.75 $T_{\mathrm{melt}}$ when compared to Fe, where it increases by 0.05 eV for the same range. The NEB computed migration barrier meanwhile, remains almost a constant.
 
 \begin{figure}[htp]
 \centering
@@ -896,7 +896,7 @@ As can be seen in Fig. \ref{fig:18}, the self-diffusion coefficients for Mo from
 \begin{figure}[!htp]
 \centering
 \includegraphics[scale=0.65]{migration_barriers}
-\caption{Transition pathways for Mo at different temperatures using the FTS method. Non-convergence of the string is evident at high temperatures}
+\caption{Atomic migration pathway for Mo at different temperatures along the reaction coordinate using the FTS method. Each point along a curve (string) is a centroid (configuration). Non-convergence of the string is evident at high temperatures}
 \label{fig:19}
 \end{figure}
 
@@ -911,7 +911,7 @@ As can be seen in Fig. \ref{fig:18}, the self-diffusion coefficients for Mo from
 \label{fig:20}
 \end{figure}
 
-From the Gaussian distributions of the first NN distances of different species (Figs. (b) of the respective species), two different trends can be observed at the highest simulated temperatures of the species: the first NN atoms move away from the atom, as seen in from the distributions of Al, Ni and Cu (FCC species) and the first NN atoms move towards the atom, as seen in the distributions of Fe and Mo (BCC species). Fig. \ref{fig:20} shows the relative shift of the first NN atoms from their geometric position (obtained from the temperature dependent lattice constants) against the fraction of melting temperature. This shift is considered as a measure of the bulk anharmonicity of a species. It can be seen that for the FCC species, the relative shift is 0 at the lowest temperature and increases with increasing temperature. Al shows the highest shift since it has the weakest cohesive energy ($-3.411$ eV / atom \cite{Mendelev2009a}), followed by Cu ($-3.49$ eV / atom \cite{Mendelev2008}) and Ni ($-4.45$ eV / atom \cite{Mishin2004}). For the BCC species on the other hand, the first NN atoms seem to move slightly away from the atom and then move closer towards the atom at elevated temperatures as observed from the distributions. This can also be attributed to the string cohesive energies of the BCC species, Fe ($-4.316$ eV / atom  \cite{Ackland1997}) and Mo ($-6.82$ eV / atom \cite{Zhou2004}). Because the cohesive energy for Ni is stronger than that of Fe, this energy alone is not a complete explanation, but the relative geometries of the two crystal structure must also play a role.
+From the Gaussian distributions of the first NN distances from an atom of different species (Figs. (b) of the respective species), two different trends can be observed at the highest simulated temperatures of the species: the first NN atoms move away from the atom, as seen in the distributions of Al, Ni and Cu (FCC species) and the first NN atoms move towards the atom, as seen in the distributions of Fe and Mo (BCC species). Fig. \ref{fig:20} shows the relative shift of the first NN atoms from their geometric positions (obtained from the temperature dependent lattice constants) against the fraction of melting temperature. This shift is considered as a measure of the bulk anharmonicity of the species. It can be seen that for the FCC species, the relative shift is 0 at the lowest temperature and increases with increasing temperature. An analysis based on the cohesive energies of the species can be made: Al shows the highest shift since it has the weakest cohesive energy ($-3.411$ eV / atom \cite{Mendelev2009a}), followed by Cu ($-3.49$ eV / atom \cite{Mendelev2008}) and Ni ($-4.45$ eV / atom \cite{Mishin2004}). For the BCC species on the other hand, the first NN atoms seem to move slightly away from the atom and then move closer towards the atom at elevated temperatures as observed from the distributions. This can also be attributed to the strong cohesive energies of the BCC species, Fe ($-4.316$ eV / atom  \cite{Ackland1997}) and Mo ($-6.82$ eV / atom \cite{Zhou2004}). Because the cohesive energy for Ni is stronger than that of Fe, this energy alone is not a complete explanation. Since the high temperature behavior is governed by entropy, it is possible that Ni has a larger entropic contribution than Fe. The relative geometries of the two crystal structures may also play a significant role.
 
 \subsubsection{Vacancy anharmonicity and vacancy formation energies}
 
@@ -919,11 +919,11 @@ From the Gaussian distributions of the first NN distances of different species (
 \centering
 \subfloat[]{\includegraphics[width=3in]{vac_anharm_all}\label{20a}}
 \subfloat[]{\includegraphics[width=3in]{vac_form_all}\label{20b}}\hfill
-\caption{(a) Anharmonicity due to vacancy, expressed as the difference in $\mathrm{\AA}$ between the expected first NN distance ($\langle \mathrm{d_{1NN}^{vac}} \rangle$) to the vacancy and the geometric first NN distance to the vacancy calculated from the temperature dependent lattice constants ($\mathrm{d_{1NN}^{geo, vac}}$) against fraction of melting temperature, (b) The relative change in vacancy formation free energies as a function of temperature against fraction of melting temperature}
+\caption{(a) Anharmonicity due to a vacancy, expressed as the difference in $\mathrm{\AA}$ between the expected first NN distance ($\langle \mathrm{d_{1NN}^{vac}} \rangle$) to the vacancy and the geometric first NN distance to the vacancy calculated from the temperature dependent lattice constants ($\mathrm{d_{1NN}^{geo, vac}}$) against fraction of melting temperature, (b) The relative change in vacancy formation free energies in eV as a function of temperature against fraction of melting temperature}
 \label{fig:21}
 \end{figure}
 
-When a vacancy is created in a structure, the NN atoms relax towards that vacancy. The anharmonic contribution to this relaxation is shown in Fig. \ref{fig:21} (a), by taking the relative shift of the first NN atoms to the vacancy from their geometric position to the vacancy as a function of fraction of melting temperature.. The resulting curves have almost the same trends as the relative change in vacancy formation free energies, calculated as the difference between the temperature dependent vacancy formation free energies and the vacancy formation free energy at 0 K lattice, shown in Fig. \ref{fig:21} (b). This can be interpreted as follows: the FCC atoms have comparatively weak relaxations away from, then towards the vacancy. The formation energy (compared to the reference) is only weakly dependent on temperature, and only at very large fractions of $T_{\mathrm{melt}}$ does it really starts to drop. On the other hand, BCC atoms relax towards the vacancy quite strongly -- i.e. they \enquote*{like} it -- and indeed, the formation energy drops to match.
+When a vacancy is created in a structure, the NN atoms relax towards that vacancy. The anharmonic contribution to this relaxation is shown in Fig. \ref{fig:21} (a), by taking the relative shift of the first NN atoms to the vacancy from their geometric positions to the vacancy as a function of fraction of melting temperature. The resulting curves have almost the same trends as the relative change in vacancy formation free energies, calculated as the difference between the temperature dependent vacancy formation free energies and the vacancy formation free energy computed at the 0 K lattice constant, as shown in Fig. \ref{fig:21} (b). This can be interpreted as follows: the FCC atoms have comparatively weak relaxations away from, then towards the vacancy. The formation energy (compared to the reference) is only weakly dependent on temperature, and only at very large fractions of $T_{\mathrm{melt}}$ does it really start to drop. On the other hand, the BCC atoms relax towards the vacancy quite strongly -- i.e. they prefer occupying the vacancy site  -- and indeed, the formation energy drops to match.
 
 
 \subsubsection{Effect of sampling period}\label{sample}
@@ -931,52 +931,51 @@ When a vacancy is created in a structure, the NN atoms relax towards that vacanc
 \begin{figure}[!htp]
 \centering
 \includegraphics[scale=0.65]{sample_bcc}
-\caption{Effect of sampling period on the migration energy of Mo at 2000K}
+\caption{Effect of sampling period on the migration energy of Mo at 2000 K}
 \label{fig:22}
 \end{figure}
 
-As stated in section \ref{cas}  - Vacancy migration free energy, the highest simulated temperature was restricted to 0.75 $T_{\mathrm{melt}}$. At temperatures close to the melting point, the atoms within the crystal structure vibrate with large amplitudes, thus resulting in a fluctuating total energy of the structure. Within the FTS method, this fluctuation translates as the centroids having a lot more freedom to explore its Voronoi cell, which includes high energy potential regions. If the running average of the centroid is mixed too often with the centroid during string evolution, the centroid can get \enquote*{stuck} in such a high energy region. Because of its high energy at high temperatures, the centroid will continue evolving in the same manner with every update, thereby never converging to the minimum free energy path. The effect of the sampling period on the migration barrier is shown in Fig. \ref{fig:22}. Even at high sampling periods of up to 10000 steps, convergence is not achieved. As the string needs to be updated toward the running average of the images at least 100 times for a good convergence to the minimum free energy path increasing this sampling period beyond 10000 steps becomes computationally impractical. At lower temperatures however, a lower sampling period (5000 steps in this thesis) is sufficient to obtain a good convergence of the string. 
+As stated in section \ref{cas} - Vacancy migration free energy, the highest simulated temperature was restricted to 0.75 $T_{\mathrm{melt}}$. At temperatures close to the melting point, the atoms within the crystal vibrate with large amplitudes, thus resulting in a fluctuating total energy of the structure. Within the FTS method, this fluctuation translates as the centroids having a lot more freedom to explore its Voronoi cell, which includes high energy regions on the energy landscape. If the running average of the image is mixed too often with the centroid during string evolution, the centroid can get \enquote*{stuck} in such a high energy region. Because of this high energy at high temperatures, the centroid will continue evolving in the same manner with every update, thereby never converging to the minimum free energy path. The effect of the sampling period on the migration barrier is shown in Fig. \ref{fig:22}. Even at high sampling periods of up to 10000 steps, convergence is not achieved. As the string needs to be updated toward the running average of the images at least 100 times for a good convergence to the minimum free energy path, increasing this sampling period beyond 10000 steps becomes computationally impractical. At lower temperatures however, a lower sampling period (5000 steps in this thesis) is sufficient to obtain a good convergence of the string. 
 
 \clearpage
 \section{Conclusion}
 
-The finite temperature string (FTS) method has been used to along with the virtual work principle and thermodynamic integration (TILD) to obtain fully anharmonic self-diffusion coefficients from 1K up to 0.75 $\mathrm{T_{melt}}$ for Al, Ni, Cu, Fe and Mo. In addition, self-diffusion coefficients from direct molecular dynamics (direct MD) simulations, the quasi-harmonic method and the nudged elastic band with milestoning method are also obtained. A near perfect agreement is obtained for Al, Cu and Fe between the FTS and direct MD at high temperatures, while Ni is only slightly overestimated and Mo shows non-Arrhenius behavior at high temperatures. The coefficeints from the FTS method show a significant improvement from the coefficients computed using the quasi harmonic method at high temperatures. The coefficients from the NEB with milestoning method are lower than the direct MD coefficients by about a factor of 5 for all species. This consistency across so many species implies that there is some key component missing, either in the method or in its implementation.
+The finite temperature string (FTS) method has been used along with the virtual work principle and thermodynamic integration (TILD) to obtain fully anharmonic self-diffusion coefficients from 1K up to 0.75 $\mathrm{T_{melt}}$ for Al, Ni, Cu, Fe and Mo. In addition, self-diffusion coefficients from direct molecular dynamics (direct MD) simulations, the quasi-harmonic method and the nudged elastic band (NEB) with milestoning method are also obtained. A near perfect agreement is obtained for Al, Cu and Fe between FTS and direct MD at high temperatures, while Ni is only slightly overestimated and Mo shows non-Arrhenius behavior at high temperatures. The coefficients from the FTS method show a significant improvement from the coefficients computed using the quasi harmonic method with increasing temperatures. The coefficients from the NEB with milestoning method are lower than the direct MD coefficients by about a factor of 5 for all species. This consistency across so many species implies that there is some key component missing, either in the method or in its implementation.
 
-Non-convergence of the FTS string at temperatures greater than 0.75 $\mathrm{T_{melt}}$ can be associated to the inadequate sampling within the Voronoi cell during string evolution. The migration barriers computed from the FTS method deviate from those obtained from the NEB method with increasing temperature for all the species, as expected.
+Non-convergence of the FTS string at temperatures greater than 0.75 $\mathrm{T_{melt}}$ can be associated to inadequate sampling within the Voronoi cell during string evolution. The migration barriers computed from the FTS method deviate from those obtained from the NEB method with increasing temperature for all the species, as expected.
 
-The bulk anharmonic contribution during thermal expansion seems to depend on the cohesive energies between the atoms in the structure, wherein atoms with the least negative cohesive energies show greater anharmonicity. The anharmonic contribution due to the vacancy is much higher in the BCC species than in the FCC species. The vacancy formation free energies computed from TILD change by only a small fraction with increasing temperature for the FCC species, while those computed for the BCC species change significantly. \\
+The bulk anharmonic contribution during thermal expansion seems to depend on the cohesive energies between the atoms in the structure, wherein atoms with weaker cohesive energies show greater anharmonicity. The anharmonic contribution due to a vacancy is much higher in the BCC species than in the FCC species. The vacancy formation free energies computed from TILD change by only a small fraction with increasing temperature for the FCC species, while those computed for the BCC species change significantly. \\
 
 
 \clearpage
 \section{Future outlook}
 
-The finite temperature string method can be used to predict self-diffusion coefficients for FCC and BCC species up to 0.75 $\mathrm{T_{melt}}$. Beyond this temperature however, the FTS fails to converge to the transition path within a reasonable sampling period and number of string updates. A good first step to determining the cause for this non-convergence would be to run at higher sampling periods ($>$ 10000 steps) for a high temperature to see if low sampling period is indeed the underlying cause for this non-convergence. Since there is near perfect agreement between direct MD and FTS computed self-diffusion coefficients for species like Al, Cu and Fe, if the reason behind the offset for Ni and the convergence issues for Mo can be found and rectified, the FTS method can be applied to any metallic system with a semi-empirical classical potential. The computation of self-diffusion coefficients using direct MD with TILD, the quasi harmonic method, the FTS with virtual work method and TILD, and the NEB with milestoning method and TILD, have been implemented in an easy collection of notebooks that can be run using pyiron. 
+The finite temperature string method can presently be used to accurately predict self-diffusion coefficients for FCC and BCC species up to 0.75 $\mathrm{T_{melt}}$. Beyond this temperature however, the FTS fails to converge to the transition path within a reasonable sampling period and number of string updates. A good first step to determining the cause for this non-convergence would be to run at higher sampling periods ($>$ 10000 steps) for a high temperature to see if low sampling period is indeed the underlying cause for this non-convergence. Since there is near perfect agreement between direct MD and FTS computed self-diffusion coefficients for species like Al, Cu and Fe, if the reason behind the offset for Ni and the convergence issues for Mo can be found and rectified, the FTS method could be applied to any metallic system with a semi-empirical classical potential. The computation of self-diffusion coefficients using direct MD with TILD, the quasi harmonic method, the FTS with virtual work method and TILD, and the NEB with milestoning method and TILD, have been implemented in a collection of easy-to-execute notebooks that can be run using pyiron. 
 
-The seemingly constant shift of the NEB with milestoning result from direct MD is very suspicious and necessitates further investigation. To test the robustness of the FTS method across all species, the inclusion of non-FCC and BCC species is also necessary, e.g. for HCP species which have the complicating factor of in- and out-of-plane migration jumps.
+The seemingly constant shift of the NEB with milestoning result from direct MD is very suspicious and necessitates further investigation. To test the robustness of the FTS method across all species, the inclusion of non-FCC and BCC species is also necessary, e.g. for HCP species, which add the complicating factor of in- and out-of-plane migration jumps. Given that the TILD and FTS methods used in this thesis only calculates Helmholtz free energies of vacancy formation and migration respectively, a look into computing the Gibbs free energies is also an important next step. 
 
-Given that the TILD and FTS methods used in this thesis only calculates Helmholtz free energies of vacancy formation and migration respectively, a look into computing the Gibbs free energies is also an important next step. The deviations seen in Ni and Mo self-diffusion coefficients could be rectified by using the Gibbs free energies of vacancy migration over the Helmholtz free energies.
-
-The results obtained in this thesis are not compared against experimental results, primarily because the results obtained are as good as the potential used to simulate them. In order to draw a comparison with experimental results, it is necessary to use DFT, or DFT-accurate potentials. However, because of run times almost as expensive as direct MD, using FTS with such potentials is still computationally impractical. An alternative to DFT accurate potentials are machine learned potentials (MLPs), can be trained on-the-fly to reproduce DFT forces and energies, e.g. \cite{Gubaev2018}. This will also be a prime focus of future work with this method.
+The results obtained in this thesis are not compared against experimental results, primarily because the results obtained are as good as the potential used to simulate them. In order to draw a comparison with experimental results, it is necessary to use DFT, or DFT-accurate potentials. However, because of run times almost as expensive as direct MD, using FTS with such potentials is still computationally impractical. An alternative to DFT potentials are machine learned potentials (MLPs), which can be trained on-the-fly to reproduce DFT forces and energies, e.g. \cite{Gubaev2018}. This will also be a prime focus of future work with this method. Using an up-sampling (TILD-like) approach \cite{Duff2015} may also be an interesting way forward.
 
 \clearpage
-\section{Acknowledgements}
+\section{Acknowledgments}
 
-I would sincerely like to extend my heartfelt gratitude to Prof. Dr. Jörg Neugebauer (MPIE) and Prof. Dr. Robert Spatscheck (FZ Jülich, RWTH Aachen) for this opportunity to write my Master's thesis with them. Very few persons are able to grasp complex scientific ideas in such short time and suggest a way forward as them. I thank Prof. Dr. Blazej Grabowski (MPIE, Stuttgart University) for having that initial faith in me that I could work on this topic, and for those short yet very illuminating discussions paving the way forward for this work. I thank PD Dr. Denis Music (Materials Chemistry, RWTH Aachen) for all his help and suggestions with the administrative part of writing an external Master's thesis.
+I would sincerely like to extend my heartfelt gratitude to Prof. Dr. Jörg Neugebauer (MPIE) and Prof. Dr. Robert Spatschek (FZ Jülich, RWTH Aachen) for this opportunity to write my Master's thesis with them. Very few persons are able to grasp complex scientific ideas in such short time and suggest a way forward as them. I thank Prof. Dr. Blazej Grabowski (MPIE, Stuttgart University) for having that initial faith in me that I could work on this topic, and for those short yet very illuminating discussions paving the way forward for this work. I thank PD Dr. Denis Music (Materials Chemistry, RWTH Aachen) for all his help and suggestions with the administrative part of writing an external Master's thesis.
 
-Dr. Liam Huber (MPIE) deserves a paragraph of his own; there are very few bosses who are as patient, understanding and intelligent as Dr. Huber. I thank him for instilling in me the desire to understand why things work the way they do, and not simply take for granted that they work. Credit goes to him for making me think more like a physicist and less like an engineer (in applicable circumstances). From discussions on coding etiquette, server crashing, shaking heads because I understand less physics than he does, letting me use some of his well-written-yet-to-be-published text for presentations, to fruitful discussions on understanding each of the elements of all the work that makes up this thesis, Dr. Huber has been more of a friend than a boss to me. For this, I will be always grateful to him.
+Dr. Liam Huber (MPIE) deserves a paragraph of his own; there are very few bosses who are as patient, understanding and intelligent as Dr. Huber. I thank him for instilling in me the desire to understand why things work the way they do, and not simply take for granted that they work. Credit goes to him for making me think more like a physicist and less like an engineer (in applicable circumstances). From discussions on coding etiquette, server crashing, shaking heads because I understand less physics than he does, letting me use some of his well-written-yet-to-be-published text for presentations, to fruitful discussions on understanding each of the elements that makes this thesis up, Dr. Huber has been more of a friend than a boss to me. For this, I will be always grateful to him.
 
-I thank my colleagues at MPIE, especially Jan Janßen, for his constant efforts in making pyiron as easy to use as possible, Dr. Osamu Waseda and Dr. Eunan McEniry, for their interesting insight into the applications of the FTS method, transition pathways and constrained MD. To Dominik Gehringer, who along with Dr. Huber and Jan Janßen implemented \enquote*{protocols} in pyiron. A shout out to my boy Ananya Kumar Singh, who was always very patient with me when I needed a refresher on basic topics in mathematics and solid state physics, and on life in general. 
+I thank my colleagues at MPIE, especially Jan Janßen, for his constant efforts in making pyiron as easy to use as possible, Dr. Osamu Waseda and Dr. Eunan McEniry, for their interesting insight into the applications of the FTS method, transition pathways and constrained MD and to Dominik Gehringer, who along with Dr. Huber and Jan Janßen implemented \enquote*{protocols} in pyiron, using which the NEB, TILD, FTS and milestoning codes presently run. A shout out to my boy Ananya Kumar Singh, who was always very patient with me when I needed a refresher on basic topics in mathematics and solid state physics, and on life in general. 
 
-As this thesis marks the end of my time as a Master's student at the RWTH, I would like to briefly mention a few people who have played a behind-the-scenes role in helping me be where I am today: my parents, for trusting me enough to not ask too many questions on what I have been up to in Germany for the last three years, my sister, for being a secondary bank account, Nitesh, Karthik, Harsh, Daniel, Sharmistha, Romana and Sebastian for still being friends with me, even after my constant refusals to meet up because I had to work on this thesis, Julita, for rekindling my love for music to find peace during my blue days with FTS, and Anush,a for being an amazing person.
+As this thesis marks the end of my time as a Master's student at the RWTH, I would like to briefly mention a few people who have played a behind-the-scenes role in helping me be where I am today: my parents, for trusting me enough to not ask too many questions on what I have been up to in Germany for the last three years, my sister, for being a secondary bank account, Nitesh, Karthik, Harsh, Daniel, Sharmistha, Romana and Sebastian for still being friends with me, even after my constant refusals to meet up because I had to work on this thesis, Julita, for rekindling my love for music and to find peace in it during my blue days with FTS, and Anusha, for being an amazing person.
 
 \clearpage
 \section{Declaration of originality}
 
-I, Raynol Dsouza, hereby confirm that unless stated otherwise, this work is the result of my own efforts. These efforts include the originality of written sections, figures or similar pictorial material and results. Where material is drawn from other sources, references have been included. \\
+I, Raynol Dsouza, hereby confirm that unless stated otherwise, this work is the result of my own efforts. These efforts include the originality of written sections, figures or similar pictorial material, and results. Where material is drawn from other sources, references have been included. \\
 \\
 \\
-\flushright(Raynol Dsouza)
-
+\begin{flushright}
+(Raynol Dsouza)
+\end{flushright}
 
 \newpage
 \bibliography{citations} 
@@ -985,37 +984,148 @@ I, Raynol Dsouza, hereby confirm that unless stated otherwise, this work is the 
 \newpage
 \section{Appendix}
 
-\subsection{Effect of number of images}
+\subsection{Effect of number of centroids}
 
 \begin{figure}[!htp]
 \centering
 \subfloat[]{\includegraphics[width=3in]{n_images_bcc}\label{22a}}
 \subfloat[]{\includegraphics[width=3in]{n_images_fcc}\label{22b}}\hfill
-\caption{Effect of the number of images on the migration energies for (a) FCC (Ni at 1K) and (b) BCC (Mo at 1K) crystal structures}
+\caption{Effect of the number of centroids on the migration energies for (a) BCC (Mo at 1 K) and (b) FCC (Ni at 1 K) crystal structures}
 \label{fig:23}
 \end{figure}
 
-Since the transition path obtained from the FTS method is not fitted to obtain the migration barrier, it is important to use a sufficient number of centroids which make up the string. As can be seen in Fig. \ref{fig:23}, too few centroids give the wrong migration energies, because the path along which virtual work is computed is too sparse. On the other hand, using too many centroids increases computational costs. In this work, 13 centroids for FCC structures and 15 images for BCC structures are used.
+Since the transition path obtained from the FTS method is not fitted to a maxima to obtain the migration barrier, it is important to use a sufficient number of centroids to make up the string. As can be seen in Fig. \ref{fig:23}, too few centroids give the wrong migration energies, because the path along which virtual work is computed is too sparse. On the other hand, using too many centroids increases computational costs. In this work, 13 centroids for the FCC structures and 15 images for the BCC structures are used.
 
 \subsection{Effect of smoothing}\label{smooth}
 
 \begin{figure}[!htp]
 \centering
 \includegraphics[scale=0.65]{smooth}
-\caption{Effect of nominal smoothing on the migration energy of Mi at 1K}
+\caption{Effect of nominal smoothing on the migration energy of Mo at 1 K}
 \label{fig:24}
 \end{figure}
 
-The amount of smoothing applied to the string during its evolution also plays a role in determining the correct migration barrier. Fig. \ref{fig:24} shows the increase in the migration barrier with increasing nominal smoothing of 0.001, 0.01, 0.1 and 1. At maximum nominal smoothing, the string should be the same as the interpolated string between the equilibrium vacancy structures. Since the potential energy landscape for vacancy diffusion is not as rough as the landscapes for which FTS was originally designed to be applied, a very low nominal smoothing of 0.01 is used in this work.
+The amount of smoothing applied to the string during its evolution also plays a role in determining the correct migration barrier. Fig. \ref{fig:24} shows the increase in the migration barrier with increasing nominal smoothing of 0.001, 0.01, 0.1, 1 and 2. At infinite nominal smoothing, the string should be the same as the interpolated string between the equilibrium vacancy structures. Since the potential energy landscape for vacancy diffusion is not as rough as the landscapes for which FTS was originally designed to be applied, a very low nominal smoothing of 0.01 is sufficient for this work.
+
+\subsection{Equilibrium vacancy concentration from the second law of thermodynamics}\label{2ndlaw}
+
+The Gibbs free energy $G$ of a crystal containing $N$ atoms and $n$ vacancies at a temperature $T$ is given by,
+%
+\begin{equation} \label{eq:50}
+G(N, n, T) = G(N, T) + n\cdot G^v_f(T) - TS_{mix} (N, n)
+\end{equation}
+%
+here, $G(N, T)$ is the free energy of the prefect crystal, and $G(N, T) = H(N, T) - TS_{vib}(N, T)$, where $H$ is the enthalpy of the crystal which contains vibrating atoms, that produce an entropy $S_{vib}$ in the crystal. 
+
+Energy is required to sever the bonds between an atom and its nearest neighbors, and create a vacancy. Provided the atoms in the crystal are of the same species, at a given temperature, this energy is always the same regardless of how the vacancy is created. This energy is the vacancy formation free energy $G^v_f(T)$ at a given temperature, and $G^v_f(T) = H^v_f(T) - TS^v_f(T)$, where $H^v_f(T)$ is the enthalpy required to create the vacancy, and $S^v_f(T)$ is the increase in entropy in the crystal due to its creation. In order to create $n$ vacancies in the crystal at a temperature $T$, an extra energy of $n\cdot G^v_f (T)$ must be provided to the crystal.
+
+Having $n$ vacancies increases the overall entropy in the crystal. This entropy, which is called the entropy of mixing $S_{mix}$ comes exclusively from mixing $N$ atoms and $n$ vacancies, and not from the existence of the atoms and the vacancies (which is already accounted for). Since $S_{mix}$ depends only on $N$ and $n$, $S_{mix}$ can be given by the Boltzmann equation \cite{Gottstein2004} as,
+%
+\begin{equation} \label{eq:51}
+S_{mix}(N, n) = k_B\cdot \mathrm{ln}[P(N, n)]
+\end{equation}
+% 
+where $P(N, n)$ is the number of possibilities to arrange $n$ vacancies in a crystal which contains $N$ atoms, and $k_B$ is the Boltzmann constant. The solution to $P(N, n)$ is given by the binomial coefficient and can be written in factorials as,
+%
+\begin{equation} \label{eq:52}
+\mathrm{ln}[P(N, n)] = \begin{pmatrix}N \\ n \end{pmatrix} = \dfrac{N!}{n!(N-n)!}
+\end{equation}
+% 
+Substituting Eqs. (\ref{eq:51}) and {\ref{eq:52}) in Eq. (\ref{eq:50}) gives,
+%
+\begin{equation} \label{eq:53}
+G(N, n, T) = G(N, T) + n\cdot G^v_f  - k_BT \cdot \mathrm{ln} \left[\dfrac{N!}{n!(N-n)!}\right]
+\end{equation}
+%
+\\
+For the crystal to be in thermodynamic equilibrium at a constant $N$ and $T$, the minimum value for the Gibbs free energy $G$ as a function of $n$, obtained by differentiating Eq. (\ref{eq:53}) with respect to $n$, is set to 0,
+%
+\begin{equation} \label{eq:54}
+\dfrac{dG(N, n, T)}{dn} = G^v_f  - k_BT \cdot \dfrac{d}{dn}\left(\mathrm{ln} \left[\dfrac{N!}{n!(N-n)!}\right]\right) = 0
+\end{equation}
+%
+Simplifying Eq. (\ref{eq:54}) gives,
+%
+\begin{equation} \label{eq:55}
+\dfrac{-G^v_f}{k_BT} = \dfrac{d}{dn}(\mathrm{ln}N! - \mathrm{ln}n! - \mathrm{ln}(N-n)!)
+\end{equation}
+%
+Using the Stirling's approximation which states that $\mathrm{ln}x! = x\mathrm{ln}x$ and solving the differential, Eq. (\ref{eq:55}) reduces to,
+%
+\begin{equation} \label{eq:56}
+\dfrac{-G^v_f}{k_BT} = \mathrm{ln}n - \mathrm{ln}(N-n)
+\end{equation}
+%
+At any given $T$ the number of vacancies in a crystal is always lesser than the number of atoms, $n << N$. Using this fact,
+%
+\begin{equation} \label{eq:57}
+\dfrac{-G^v_f}{k_BT} = \mathrm{ln}\dfrac{n}{N}
+\end{equation}
+%
+Since $\dfrac{n}{N}$ is nothing but the equilibrium vacancy concentration $C_v$ in the crystal,
+%
+\begin{equation} \label{eq:58}
+\dfrac{n}{N} = C_v = \mathrm{exp}\left(\dfrac{-G^v_f}{k_BT}\right)
+\end{equation}
+%
+
+\subsection{Thermodynamic integration}\label{TI}
+
+Thermodynamic integration is a method used to compare the difference in free energy between two given states (e.g., $A$ and $B$) whose potential energies $E_A$ and $E_B$ depend on different spatial coordinates.The free energy of a system is not simply a function of the phase space coordinates of the system, but is instead a function of the Boltzmann-weighted integral over phase space (i.e. the partition function). The free energy difference between the two states is thus calculated by defining a thermodynamic path between the states, and integrating over ensemble-averaged potential energy changes along the path.\\
+
+Let the potential energy function $E(\lambda)$ between the two states $A$ and $B$ is given by,
+%
+\begin{equation} \label{eq:59}
+E(\lambda) = E_A + \lambda(E_B - E_A)
+\end{equation}
+%
+where $\lambda$ is the coupling parameter with a value between 0 and 1, such that $\lambda=0$ corresponds to the potential energy of system $A$ and $\lambda=1$ corresponds to the potential energy of system $B$.
+
+In a canonical ensemble, the partition function is given as,
+%
+\begin{equation} \label{eq:60}
+Z(N,V,T,\lambda )=\sum _{s}\exp\left(\dfrac{-E_s(\lambda )}{k_BT}\right)
+\end{equation}
+%
+where $E_s(\lambda)$ is the potential energy of each state $s$ in the ensemble given by the function $E(\lambda)$. The free energy of this system is defined as:
+%
+\begin{equation} \label{eq:61}
+F(N,V,T,\lambda )=-k_BT\ln Z(N,V,T,\lambda)
+\end{equation}
+The probability $P_s$ to find a system in a state $s$ is given by,
+%
+\begin{equation} \label{eq:62}
+P_s =\exp\left(\dfrac{-E_s(\lambda )}{k_BT}\right)
+\end{equation}
+%
+and since $P = \sum_s P_s =1$,
+%
+\begin{equation} \label{eq:63}
+P = \sum_s P_s =\dfrac{1}{Z}\sum_s\exp\left(\dfrac{-E_s(\lambda )}{k_BT}\right)
+\end{equation}
+%
+Since the expectation value of the ensemble, $\langle E \rangle = \sum_s E_s P_s$, taking the derivative of $F$ with respect to $\lambda$ gives,
+%
+\begin{equation} \label{eq:64}
+\frac {\partial F(\lambda )}{\partial \lambda} = -\frac {k_BT}{Z}\frac {\partial Z}{\partial \lambda} = \frac {k_BT}{Z}\sum _{s}{\frac {1}{k_BT}}\exp\left(\dfrac{-E_{s}(\lambda)}{k_BT}\right)\frac {\partial E_{s}(\lambda)}{\partial \lambda} = \left\langle {\frac {\partial E(\lambda )}{\partial \lambda }}\right\rangle _{\lambda }
+\end{equation}
+%
+Integrating over the whole range of $\lambda$, 
+%
+\begin{equation} \label{eq:65}
+ \Delta F(A\rightarrow B)=\int _{0}^{1}{\frac {\partial F(\lambda )}{\partial \lambda}}d\lambda =\int _{0}^{1}\left\langle {\frac {\partial E(\lambda )}{\partial \lambda }}\right\rangle _{\lambda }d\lambda
+\end{equation}
+%
+The change in free energy between two states $A$ and $B$ can thus be computed from the integral of the ensemble-averaged derivatives of potential energy over the coupling parameter $\lambda$.
 
 \subsection{TILD Integrands}
 
-The integrands obtained from the TILD method for the decoupling between the vacancy with one harmonic oscillator structure and the EAM structure are shown in the Fig. \ref{fig:25}. A left bias is applied such that the lambdas are more concentrated towards the vacancy with the harmonic oscillator structure. Using 8 and 16 discreet coupling strengths does not affect the integrands by much, except at the lambda = 0 region, where the extra points from the 16 resolve better.
+The integrands obtained from the TILD method for the decoupling between the vacancy with one harmonic oscillator structure and the EAM structure are shown in the Fig. \ref{fig:25}. A left bias is applied such that the lambdas are more concentrated towards the vacancy with the harmonic oscillator structure. Using a larger number of discreet coupling strengths gives a better resolution in the region close to $\lambda = 0$.
 
 \begin{figure}[!htp]
 \centering
 \includegraphics[scale=0.65]{lambdas}
-\caption{Integrand vs. Lambdas from TILD at 2000K for Mo}
+\caption{Integrand vs. $\lambda$ from TILD at 2000 K for Mo}
 \label{fig:25}
 \end{figure}
 
@@ -1040,10 +1150,8 @@ class StringReflect(StringDistances):
         centroid_positions (numpy.ndarray): The positions of the image's centroid.
         all_centroid_positions (list/numpy.ndarray): A list of positions for all centroids in the string.
         cell (numpy.ndarray): The 3x3 cell vectors for periodic boundary conditions.
-        pbc (numpy.ndarray): Three booleans declaring which dimensions have periodic boundary conditions for finding
-            the minimum distance convention.
-        eps (float): The maximum distance between the closest centroid and the parent centroid to be considered a match
-            (i.e. no reflection of image necessary). (Default is 1e-6.)
+        pbc (numpy.ndarray): Three booleans declaring which dimensions have periodic boundary conditions for finding the minimum distance convention.
+        eps (float): The maximum distance between the closest centroid and the parent centroid to be considered a match (i.e. no reflection of image necessary). (Default is 1e-6.)
 
     Output attributes:
         positions (numpy.ndarray): Either the original positions passed in, or the previous ones.
@@ -1055,8 +1163,7 @@ class StringReflect(StringDistances):
     def __init__(self, name=None):
         super(StringReflect, self).__init__(name=name)
 
-    def command(self, positions, velocities, forces, previous_positions, previous_velocities, previous_forces,
-                centroid_positions, all_centroid_positions, cell, pbc, eps):
+    def command(self, positions, velocities, forces, previous_positions, previous_velocities, previous_forces, centroid_positions, all_centroid_positions, cell, pbc, eps):
         
         # Check if the image is closest to its parent centroid or not. Returns a boolean.
         if self.check_closest_to_parent(positions, centroid_positions, all_centroid_positions, cell, pbc, eps):
@@ -1081,8 +1188,7 @@ class StringReflect(StringDistances):
 class CentroidsSmoothing(PrimitiveVertex):
 
     """
-    Global smoothing following Vanden-Eijnden and Venturoli (2009). The actual smoothing strength is the product of the
-    nominal smoothing (`kappa`), the number of images, and the mixing fraction (`dtau`).
+    Global smoothing following Vanden-Eijnden and Venturoli (2009). The actual smoothing strength is the product of the nominal smoothing (`kappa`), the number of images, and the mixing fraction (`dtau`).
     Input Attributes:
         kappa (float): Nominal smoothing.
         dtau (float): Mixing fraction (from updating the string towards the running average of the image positions).
@@ -1133,8 +1239,7 @@ class CentroidsSmoothing(PrimitiveVertex):
 \begin{lstlisting}
 class CentroidsReparameterization(PrimitiveVertex):
     """
-    Use linear interpolation to equally space the centroids between the first and last centroid in 3N dimensional space,
-    using a piecewise function
+    Use linear interpolation to equally space the centroids between the first and last centroid in 3N dimensional space, using a piecewise function
 
     Input attributes:
         all_centroid_positions (list/numpy.ndarray): List of all the centroids along the string
